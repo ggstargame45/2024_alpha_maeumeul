@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sand ScreenPosition
+  m_Shader: {fileID: 4800000, guid: ee8d64f62a4fbe1409d55fbb975a4366, type: 3}
+  m_ShaderKeywords: _AOMASK_ON _DIRECTIONALLIGHTONLY_ON _ENABLEDETAILMASK_ON _INVERTMASK_ON
+    _SOURCE_METALLICALPHA _SPACEPROJECTION_SCREENPOSITION _SPARKLESOURCE_EMISSIVESPARKLES
+    _VISUALIZESPARKLE_NONE
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 2a2078713f275694eab083a8ee26c0dd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 2800000, guid: 7099162af8992674eabeda3e5087590b, type: 3}
+        m_Scale: {x: 1.25, y: 1.25}
+        m_Offset: {x: 0, y: 0}
+    - _DotMask:
+        m_Texture: {fileID: 2800000, guid: 94c8bd82af600bb44a1bfb3aa53b4aca, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: ca7a42c35dacebc4eb85ffd8789f6716, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMapMAHS:
+        m_Texture: {fileID: 2800000, guid: dc3f5f1effbdb114187602dcc9911983, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 2800000, guid: 8504b87c262233a479713b664d8239de, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SparkleMap:
+        m_Texture: {fileID: 2800000, guid: cd6fc442aca6c594eb9a9b20be7138ca, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Addsmooth: 0
+    - _AmountSparkle: 0.958
+    - _AoIntensity: 0.65
+    - _AoMask: 1
+    - _Brightness: 1
+    - _BumpScale: -0.45
+    - _ContrastDetailMap: 20.25
+    - _ContrastDotMask: 0
+    - _ContrastSparkles: 0
+    - _CrystalsIntensity: 1
+    - _Desaturatecrystals: 0
+    - _DirectionalLightOnly: 1
+    - _EmissionIntensity: 1
+    - _EnableDetailMask: 1
+    - _Glossiness: 0.81
+    - _IntensityDotMask: 1
+    - _IntensityMask: 1
+    - _InvertABaseColor: 0
+    - _InvertMask: 1
+    - _LerpsmoothWB: 0
+    - _Metallic: 0.28
+    - _Parallax: 0.1
+    - _Parallax1: 0.092
+    - _Saturation: 0
+    - _ShadowMask: 0.85
+    - _Source: 0
+    - _SourceMask: 0
+    - _SpaceProjection: 0
+    - _SparkleSource: 1
+    - _SpreadDetailMap: 0.15
+    - _SpreadDotMask: 0.557
+    - _TilingCrystals: 0.85
+    - _TilingDotMask: 5
+    - _TilingInstance: 0.5
+    - _UseBaseColorDot: 0
+    - _VisualizeMask: 0
+    - _VisualizeSparkle: 0
+    - __dirty: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _GlobalXYTilingXYZWOffsetXY: {r: 1.25, g: 1.25, b: 0, a: 0}

@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: ee8d64f62a4fbe1409d55fbb975a4366
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _SparkleMap: {fileID: 2800000, guid: cee44b068e00975438350a69e433c421, type: 3}
+  - _DotMask: {fileID: 2800000, guid: 94c8bd82af600bb44a1bfb3aa53b4aca, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
