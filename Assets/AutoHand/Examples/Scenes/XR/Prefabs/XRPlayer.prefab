@@ -9522,6 +9522,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RobotHand (L)
       objectReference: {fileID: 0}
+    - target: {fileID: 8685472768745978638, guid: 386242486c5972145be957989b61c7df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8783913793033214316, guid: 386242486c5972145be957989b61c7df, type: 3}
       propertyPath: m_Layer
       value: 0

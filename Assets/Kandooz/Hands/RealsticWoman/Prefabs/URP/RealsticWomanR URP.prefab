@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RealsticWomanR URP
       objectReference: {fileID: 0}
+    - target: {fileID: 2927684672117922646, guid: ce0c2a77b33cc864f8332db9b486a1af, type: 3}
+      propertyPath: fingers.Array.data[0].weight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5380227636845732974, guid: ce0c2a77b33cc864f8332db9b486a1af, type: 3}
       propertyPath: m_IsActive
       value: 0
