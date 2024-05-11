@@ -116,8 +116,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -658,8 +656,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1081,8 +1077,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1325,8 +1319,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1455,8 +1447,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1511,6 +1501,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7753172482659477634}
     m_Modifications:
+    - target: {fileID: 376428461563943621, guid: 9c9d168272ed2b64f9a9767fd9d7348f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 8515371878481805302, guid: 9c9d168272ed2b64f9a9767fd9d7348f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.2
@@ -1573,6 +1567,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7753172482659477634}
     m_Modifications:
+    - target: {fileID: 376428461563943621, guid: 9c9d168272ed2b64f9a9767fd9d7348f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 8515371878481805302, guid: 9c9d168272ed2b64f9a9767fd9d7348f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0000000024862867
@@ -1635,6 +1633,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7753172482659477634}
     m_Modifications:
+    - target: {fileID: 376428461563943621, guid: 9c9d168272ed2b64f9a9767fd9d7348f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 8515371878481805302, guid: 9c9d168272ed2b64f9a9767fd9d7348f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.2
@@ -1697,6 +1699,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7753172482659477634}
     m_Modifications:
+    - target: {fileID: 376428461563943621, guid: 9c9d168272ed2b64f9a9767fd9d7348f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 8515371878481805302, guid: 9c9d168272ed2b64f9a9767fd9d7348f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0000000024862867
@@ -1759,6 +1765,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7753172482659477634}
     m_Modifications:
+    - target: {fileID: 376428461563943621, guid: 9c9d168272ed2b64f9a9767fd9d7348f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 8515371878481805302, guid: 9c9d168272ed2b64f9a9767fd9d7348f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.2
@@ -1821,6 +1831,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7753172482659477634}
     m_Modifications:
+    - target: {fileID: 376428461563943621, guid: 9c9d168272ed2b64f9a9767fd9d7348f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 8515371878481805302, guid: 9c9d168272ed2b64f9a9767fd9d7348f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.2
@@ -1883,6 +1897,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7753172482659477634}
     m_Modifications:
+    - target: {fileID: 376428461563943621, guid: 9c9d168272ed2b64f9a9767fd9d7348f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 8515371878481805302, guid: 9c9d168272ed2b64f9a9767fd9d7348f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.2
@@ -1945,6 +1963,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7753172482659477634}
     m_Modifications:
+    - target: {fileID: 376428461563943621, guid: 9c9d168272ed2b64f9a9767fd9d7348f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 8515371878481805302, guid: 9c9d168272ed2b64f9a9767fd9d7348f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0000000024862867
@@ -2007,6 +2029,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7753172482659477634}
     m_Modifications:
+    - target: {fileID: 376428461563943621, guid: 9c9d168272ed2b64f9a9767fd9d7348f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 8515371878481805302, guid: 9c9d168272ed2b64f9a9767fd9d7348f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.2

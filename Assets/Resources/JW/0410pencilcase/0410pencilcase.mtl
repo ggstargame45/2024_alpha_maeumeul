@@ -1,0 +1,120 @@
+# Blender 4.0.2 MTL File: '0410pencilcase.blend'
+# www.blender.org
+
+newmtl Material.001
+Ns 571.393127
+Ka 1.000000 1.000000 1.000000
+Kd 0.075652 0.053505 0.183827
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Pen1Main
+Ns 20.000006
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 1
+map_Kd C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen1MainAlbedo.png
+map_Ks C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen1MainRough.png
+map_refl C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen1MainMetal.png
+map_d C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen1MainAlbedo.png
+map_Bump -bm 0.300000 C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen1MainNormal.png
+
+newmtl Pen1Top
+Ns 20.000006
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 1
+map_Kd C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen1TopAlbedo.png
+map_Ks C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen1TopRough.png
+map_refl C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen1TopMetal.png
+map_d C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen1TopAlbedo.png
+map_Bump -bm 0.300000 C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen1TopNormal.png
+
+newmtl Pen2
+Ns 20.000006
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 1
+map_Kd C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen2Albedo.png
+map_Ks C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen2Rough.png
+map_refl C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen2Metal.png
+map_d C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen2Albedo.png
+map_Bump -bm 0.300000 C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen2Normal.png
+
+newmtl Pen3
+Ns 20.000006
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 1
+map_Kd C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen3Albedo.png
+map_Ks C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen3Rough.png
+map_refl C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen3Metal.png
+map_d C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen3Albedo.png
+map_Bump -bm 0.300000 C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen3Normal.png
+
+newmtl Pen3Top
+Ns 20.000006
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 1
+map_Kd C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen3TopAlbedo.png
+map_Ks C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen3TopRough.png
+map_refl C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen3TopMetal.png
+map_d C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen3TopAlbedo.png
+map_Bump -bm 0.300000 C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen3TopNormal.png
+
+newmtl Pen6
+Ns 20.000006
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen6Albedo.png
+map_Ks C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen6Rough.png
+map_refl C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen6Metal.png
+map_Bump -bm 0.300000 C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen6Normal.png
+
+newmtl Pen6Top
+Ns 20.000006
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 1
+map_Kd C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen6TopAlbedo.png
+map_Ks C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen6Rough.png
+map_refl C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen6TopMetal.png
+map_d C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen6TopAlbedo.png
+map_Bump -bm 0.300000 C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen6TopNormal.png
+
+newmtl Pen_4
+Ns 20.000006
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 1
+map_Kd C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen4Albedo.png
+map_Ks C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen4Rough.png
+map_refl C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen4Metal.png
+map_d C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen4Albedo.png
+map_Bump -bm 0.300000 C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen4Normal.png
+
+newmtl Pen_5
+Ns 20.000006
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 1
+map_Kd C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen5Albedo.png
+map_Ks C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen5Rough.png
+map_refl C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen5Metal.png
+map_d C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen5Albedo.png
+map_Bump -bm 0.300000 C:/Users/SERVER/Downloads/uploads_files_2804078_Pen+Pack/Pen5Normal.png
