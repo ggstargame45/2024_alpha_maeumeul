@@ -7,25 +7,19 @@ using UnityEngine.Events;
 
 public class FlowManager : MonoBehaviour
 {
-    public GameObject[] instantiateList;
+    public GameObject[] officeWorkList;
     public GameObject cutScene;
-    private List<GameObject> activationList = new List<GameObject>();
     private int index = 0;
     
-    private void Awake()
-    {
-        Call(instantiateList);
-    }
-
     private void Next()
     {
         Debug.Log(string.Format("{0}, next",gameObject.name));
-        if(index >= activationList.Count)
+        if(index >= officeWorkList.Length)
         {
             End();
             return;
         }
-        activationList[index].GetComponent<OfficeWorkManager>().OfficeNext();
+        officeWorkList[index].GetComponent<OfficeWorkManager>().OfficeNext();
         index += 1;
     }
 
