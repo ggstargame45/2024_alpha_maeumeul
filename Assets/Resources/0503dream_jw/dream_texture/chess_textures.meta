@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 97cc62c464fa1ce459726ad8a9290882
+=======
+guid: cf7d7306025676840af3d45f69fa2cf3
+>>>>>>> origin/design/minju
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

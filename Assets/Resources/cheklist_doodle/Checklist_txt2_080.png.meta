@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: f13dae5ba9b9ee74ebe34251444082a4
+=======
+guid: 510e6f3676ef909439f003af82b72baf
+>>>>>>> origin/design/minju
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

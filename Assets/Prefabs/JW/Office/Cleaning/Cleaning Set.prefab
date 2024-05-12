@@ -1702,7 +1702,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7732455464659597961}
         m_TargetAssemblyTypeName: OfficeWorkManager, Assembly-CSharp
-        m_MethodName: Next
+        m_MethodName: OfficeNext
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3186,8 +3186,8 @@ Transform:
   m_GameObject: {fileID: 9033096119865720010}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.62799966, y: 0.191, z: 0.231}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalPosition: {x: 0.962, y: 0.275, z: 0.289}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2045603517996619000}

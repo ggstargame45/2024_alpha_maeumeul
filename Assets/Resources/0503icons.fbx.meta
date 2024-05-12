@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: d5f122b1da2c42145b4aefda047face3
+=======
+guid: e806bf457322ed943bdf5d41fe5cafa1
+>>>>>>> origin/design/minju
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
