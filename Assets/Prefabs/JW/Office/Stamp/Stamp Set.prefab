@@ -382,7 +382,19 @@ MonoBehaviour:
         m_CallState: 2
   endEvents:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8665400850233427453}
+        m_TargetAssemblyTypeName: OfficeWorkManager, Assembly-CSharp
+        m_MethodName: OfficeNext
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &955771347853154936
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,9 +856,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 574da326a491fe84caec7d700c939385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  awakeEvent:
-    m_PersistentCalls:
-      m_Calls: []
   shiningColor: {r: 1, g: 1, b: 0, a: 1}
 --- !u!1 &1321229476690345159
 GameObject:
@@ -1264,9 +1273,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 574da326a491fe84caec7d700c939385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  awakeEvent:
-    m_PersistentCalls:
-      m_Calls: []
   shiningColor: {r: 1, g: 1, b: 0, a: 1}
 --- !u!1 &1689594454281190715
 GameObject:
@@ -1364,9 +1370,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 574da326a491fe84caec7d700c939385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  awakeEvent:
-    m_PersistentCalls:
-      m_Calls: []
   shiningColor: {r: 1, g: 1, b: 0, a: 1}
 --- !u!1 &1773382205851605132
 GameObject:
@@ -2929,7 +2932,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8665400850233427453}
         m_TargetAssemblyTypeName: OfficeWorkManager, Assembly-CSharp
-        m_MethodName: Next
+        m_MethodName: OfficeNext
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3035,9 +3038,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 574da326a491fe84caec7d700c939385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  awakeEvent:
-    m_PersistentCalls:
-      m_Calls: []
   shiningColor: {r: 1, g: 1, b: 0, a: 1}
 --- !u!1 &5940424261010955536
 GameObject:
@@ -3225,7 +3225,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8665400850233427453}
         m_TargetAssemblyTypeName: OfficeWorkManager, Assembly-CSharp
-        m_MethodName: Next
+        m_MethodName: OfficeNext
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3328,6 +3328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6649243445476218939}
   - component: {fileID: 8665400850233427453}
+  - component: {fileID: 6756870493929111151}
   m_Layer: 0
   m_Name: Stamp Set
   m_TagString: Untagged
@@ -3440,6 +3441,18 @@ MonoBehaviour:
   endEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6756870493929111151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6441039027490654525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bed9ae3b6d33bce4b8f79f33e4fc9dfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6839374294132050056
 GameObject:
   m_ObjectHideFlags: 0

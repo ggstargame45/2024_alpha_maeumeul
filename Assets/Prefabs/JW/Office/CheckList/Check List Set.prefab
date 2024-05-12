@@ -96,9 +96,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 574da326a491fe84caec7d700c939385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  awakeEvent:
-    m_PersistentCalls:
-      m_Calls: []
   shiningColor: {r: 1, g: 1, b: 0, a: 1}
 --- !u!1 &966624890686966522
 GameObject:
@@ -260,21 +257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 574da326a491fe84caec7d700c939385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  awakeEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1505354992072805222}
-        m_TargetAssemblyTypeName: OfficeWorkManager, Assembly-CSharp
-        m_MethodName: OfficeNext
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   shiningColor: {r: 1, g: 1, b: 0, a: 1}
 --- !u!1 &6027950698764323363
 GameObject:
@@ -437,6 +419,7 @@ GameObject:
   - component: {fileID: 6098202744196047595}
   - component: {fileID: 8762848591191598918}
   - component: {fileID: 7432507954576621038}
+  - component: {fileID: 8750850057438120699}
   m_Layer: 0
   m_Name: Check List
   m_TagString: CheckList
@@ -453,7 +436,7 @@ Transform:
   m_GameObject: {fileID: 7159783551628439697}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.665, y: 0.811, z: 0.619}
+  m_LocalPosition: {x: 0.728, y: 0.696, z: 0.4658}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -573,3 +556,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   lockHandOnGrab: 0
+--- !u!114 &8750850057438120699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7159783551628439697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 818f66f138c42454883d407a70426090, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

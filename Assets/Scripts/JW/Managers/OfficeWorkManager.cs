@@ -9,7 +9,7 @@ public class OfficeWorkManager : MonoBehaviour
     public UnityEvent startEvent;
     public List<UnityEvent> eventList;
     public UnityEvent endEvent;
-    public Action endWork;
+    public UnityAction endWork;
     int index = 0;
 
     private void Start()
@@ -40,5 +40,10 @@ public class OfficeWorkManager : MonoBehaviour
         Debug.Log(string.Format("{0} end", gameObject.name));
         endWork?.Invoke();
         endEvent?.Invoke();
+    }
+
+    public void Test(int i)
+    {
+        Debug.Log(string.Format("{0} : TEST {1}", gameObject.name, i));
     }
 }

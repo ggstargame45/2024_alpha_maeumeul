@@ -6,14 +6,12 @@ using UnityEngine.Events;
 
 public class Shining : MonoBehaviour
 {
-    public UnityEvent awakeEvent;
-    public Color shiningColor;
+    public Color shiningColor = Color.yellow;
     private Renderer target;
 
     private void Awake()
     {
         target = GetComponent<Renderer>();
-        awakeEvent?.Invoke();
     }
 
     public void On()
@@ -25,6 +23,7 @@ public class Shining : MonoBehaviour
     public void Off()
     {
         StopAllCoroutines();
+        target.material.color = new Color(0, 0, 0, 0);
     }
 
     private IEnumerator Process()
