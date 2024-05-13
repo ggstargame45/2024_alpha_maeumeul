@@ -38,7 +38,7 @@ public class FlowManager : MonoBehaviour
     {
         if (cutScene)
         {
-            Instantiate(cutScene);
+            cutScene.SetActive(true);
         }
     } 
 }
