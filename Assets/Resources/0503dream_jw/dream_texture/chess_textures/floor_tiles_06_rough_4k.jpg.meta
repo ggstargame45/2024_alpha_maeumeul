@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 7c4bf4102d41cf34588ac885ab9b2461
+=======
+<<<<<<< HEAD
+guid: 2bab721e65fb24c4bb5adf3a6666ae0e
+=======
+guid: 9fdd5fae527ffd24fb0e05b18fbb4242
+>>>>>>> origin/design/minju
+>>>>>>> design/minju
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -93,6 +101,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
@@ -106,6 +115,8 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+=======
+>>>>>>> design/minju
   spriteSheet:
     serializedVersion: 2
     sprites: []

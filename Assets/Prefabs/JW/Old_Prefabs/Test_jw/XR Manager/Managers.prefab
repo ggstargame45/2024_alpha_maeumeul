@@ -44,95 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e630bb45bba48a4496fec1af135d960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjectList:
-  - gameObjects:
-    - {fileID: 4242051449770563259, guid: 758fd042a6627404aadd99504b3e1e61, type: 3}
-    - {fileID: 8391727757697425468, guid: 41f41c3b77c4c604c9be50efa4c6e07f, type: 3}
-    - {fileID: 2689628540140867590, guid: 970a55852b8741646b05b04585461a7a, type: 3}
-  - gameObjects:
-    - {fileID: 9065261087459088113, guid: 2a19dc2a87cd89e4cb40a0eee69e26da, type: 3}
-  - gameObjects:
-    - {fileID: 829710757820363182, guid: d4e0eccdb4af8ce459caeaf85320f5f3, type: 3}
-  - gameObjects:
-    - {fileID: 7790138850595741185, guid: ac9468f984d397542b71ae947ed0ed15, type: 3}
---- !u!1 &5193399975805932829
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9025092504724645815}
-  m_Layer: 0
-  m_Name: XR Managers
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &9025092504724645815
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5193399975805932829}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 788907965993160202}
-  m_Father: {fileID: 2045483800978427243}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6732292645357961361
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 788907965993160202}
-  - component: {fileID: 6496600535151024185}
-  m_Layer: 0
-  m_Name: XR Interaction Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &788907965993160202
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6732292645357961361}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 9025092504724645815}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6496600535151024185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6732292645357961361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83e4e6cca11330d4088d729ab4fc9d9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_StartingHoverFilters: []
-  m_StartingSelectFilters: []
+  instantiateList:
+  - {fileID: 5330622030680265021, guid: 980188535b3fe474989915e6af6f6159, type: 3}
+  - {fileID: 6640383621686448297, guid: 9452501266bc9df4d8612573621b2801, type: 3}
+  - {fileID: 890313385624450236, guid: 28d60860cf5e7f348be6f7cd91fa5e6d, type: 3}
+  officeWorkList:
+  - {fileID: 6569201371577433823, guid: 0d0fd6d977827444d818d59be653f341, type: 3}
+  - {fileID: 9033096119865720010, guid: ff361c2ca84280943910b55d448d2426, type: 3}
+  - {fileID: 6441039027490654525, guid: 5237717676aa4e6428ec7fe15497b777, type: 3}
+  cutScene: {fileID: 7790138850595741185, guid: ac9468f984d397542b71ae947ed0ed15, type: 3}
 --- !u!1 &7314350082309785408
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +82,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 9025092504724645815}
   - {fileID: 3222949547260850740}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
