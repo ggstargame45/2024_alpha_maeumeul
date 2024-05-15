@@ -24,7 +24,7 @@ public class FlowManager : MonoBehaviour
 
     private void Next()
     {
-        Debug.Log(string.Format("{0}, next",gameObject.name));
+        Debug.Log(string.Format("{0}, next, index : {1}",gameObject.name, index));
         if(index >= officeWorkList.Length)
         {
             End();
@@ -36,7 +36,7 @@ public class FlowManager : MonoBehaviour
 
     private void End()
     {
-        if (cutScene)
+        if (cutScene != null)
         {
             cutScene.SetActive(true);
         }

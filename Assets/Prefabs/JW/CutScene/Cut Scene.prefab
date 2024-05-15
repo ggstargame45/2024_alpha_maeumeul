@@ -985,7 +985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78c509900451ee340bdda2fa942c1474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vrName: XRPlayer(Clone)
+  vrName: XRPlayer
   mainCamera: {fileID: 5181040467965911428}
   leftHand: {fileID: 5911358966884440173}
   rightHand: {fileID: 6863610999139057735}

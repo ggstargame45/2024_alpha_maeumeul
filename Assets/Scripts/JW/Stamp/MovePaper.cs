@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class MovePaper : MonoBehaviour
 {
+    public float waitSeconds = 1f;
+    [Space]
     public GameObject paper1;
     public Transform place1;
     public UnityEvent event1;
@@ -27,6 +29,7 @@ public class MovePaper : MonoBehaviour
 
     public IEnumerator Process(GameObject go, Transform target, UnityEvent unityEvent)
     {
+        yield return new WaitForSeconds(waitSeconds);
         var wfs = new WaitForSeconds(0.01f);
         float time = 1.0f, now = 0f;
         Vector3 position = go.transform.position;

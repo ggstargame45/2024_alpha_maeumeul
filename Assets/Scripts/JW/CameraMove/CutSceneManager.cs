@@ -20,17 +20,13 @@ public class CutSceneManager : MonoBehaviour
     public List<CutAway> cutAways;
     private int index = 0;
 
-    private void Awake()
-    {
-        gameObject.SetActive(false);
-    }
-
     private void OnEnable()
     {
         FirstScene();
     }
     public void FirstScene()
     {
+        StopAllCoroutines();
         StartCoroutine(FirstProcess());
     }
 

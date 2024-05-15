@@ -10,6 +10,7 @@ public class Stamp : MonoBehaviour
     public void Call()
     {
         if (!canUse) return;
+        if (!StampAngleCheck()) return;
         canUse = false;
         RaycastHit[] hits;
         hits = Physics.RaycastAll(gameObject.transform.position, transform.up * -1, distance);
@@ -28,6 +29,20 @@ public class Stamp : MonoBehaviour
     private void Update()
     {
         Debug.DrawRay(gameObject.transform.position, transform.up * -1 * distance, Color.red);
+    }
+
+    private bool StampAngleCheck()
+    {
+        var yAngle = Mathf.Abs(gameObject.transform.rotation.eulerAngles.y);
+        yAngle %= 180f;
+        if (yAngle <= 10f || yAngle >= 170f)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     private IEnumerator Process()

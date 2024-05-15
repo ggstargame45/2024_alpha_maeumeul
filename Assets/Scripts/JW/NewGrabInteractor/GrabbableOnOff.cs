@@ -16,4 +16,11 @@ public class GrabbableOnOff : MonoBehaviour
     {
         grabbable.enabled = true;
     }
+
+    public void EndWork()
+    {
+        grabbable.enabled = false;
+        var rigid = gameObject.GetComponent<Rigidbody>();
+        Destroy(rigid);
+    }
 }
