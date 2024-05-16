@@ -1,5 +1,6 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: 75c4bd27511c34846be431143fc7e173
 =======
 <<<<<<< HEAD
@@ -8,6 +9,9 @@ guid: 2cd0d8d8d4845e34da847f1c91b6fbad
 guid: 5605df27b51c13444aaf7924acdbd28a
 >>>>>>> origin/design/minju
 >>>>>>> design/minju
+=======
+guid: 2cd0d8d8d4845e34da847f1c91b6fbad
+>>>>>>> origin/design/jiun2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -15,6 +19,7 @@ TextureImporter:
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
     sRGBTexture: 1
 =======
@@ -24,6 +29,9 @@ TextureImporter:
     sRGBTexture: 1
 >>>>>>> origin/design/minju
 >>>>>>> design/minju
+=======
+    sRGBTexture: 0
+>>>>>>> origin/design/jiun2
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -71,6 +79,7 @@ TextureImporter:
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
 <<<<<<< HEAD
+<<<<<<< HEAD
   textureType: 0
 =======
 <<<<<<< HEAD
@@ -80,6 +89,10 @@ TextureImporter:
 >>>>>>> origin/design/minju
 >>>>>>> design/minju
   textureShape: 1
+=======
+  textureType: 1
+  textureShape: 2
+>>>>>>> origin/design/jiun2
   singleChannelComponent: 0
   flipbookRows: 1
   flipbookColumns: 1
@@ -87,9 +100,9 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   swizzle: 50462976
-  cookieLightType: 0
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform

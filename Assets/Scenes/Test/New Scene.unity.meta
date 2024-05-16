@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/Test/New Scene.unity.meta
 guid: bca3ffcd13975ef4e9a9f1c2293e62d6
+========
+guid: 6e0081629ef0b2342bbf6b5f17741bdc
+>>>>>>>> origin/design/jiun2:Assets/Scenes/Test/ViewTestScene.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
