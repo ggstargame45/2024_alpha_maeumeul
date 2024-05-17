@@ -2,27 +2,48 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Road S_Sidewalk
-  m_Shader: {fileID: 4800000, guid: ee8d64f62a4fbe1409d55fbb975a4366, type: 3}
-  m_ShaderKeywords: _CHANNELSELECTIONMASK_RED _DETAILWAVE_ON _DUPLICATETEXTUREATLASNORMAL_ON
-    _EMISSION _ENABLEDETAILMASK_ON _MAINWAVE_ON _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
-    _SOURCEMASK_DETAILMASK _SOURCE_METALLICALPHA _SPACEPROJECTION_VERTEXPOSITION
-    _SPARKLESOURCE_EMISSIVESPARKLES _USEAOFROMMAINPROPERTIES_ON _USEEMISSIONFROMMAINPROPERTIES_ON
-    _USEMAINNORMALMAPASNORMALDIRECTION_ON _VISUALIZESPARKLE_NONE
+  m_Shader: {fileID: 4800000, guid: 212e8098bfad8744f83a72a4a58ca876, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _SOURCE_METALLICALPHA
+  - _SPACEPROJECTION_VERTEXPOSITION
+  - _SPARKLESOURCE_EMISSIVESPARKLES
+  - _VISUALIZESPARKLE_NONE
+  m_InvalidKeywords:
+  - _CHANNELSELECTIONMASK_RED
+  - _DETAILWAVE_ON
+  - _DUPLICATETEXTUREATLASNORMAL_ON
+  - _EMISSION
+  - _ENABLEDETAILMASK_ON
+  - _MAINWAVE_ON
+  - _METALLICGLOSSMAP
+  - _NORMALMAP
+  - _PARALLAXMAP
+  - _SOURCEMASK_DETAILMASK
+  - _USEAOFROMMAINPROPERTIES_ON
+  - _USEEMISSIONFROMMAINPROPERTIES_ON
+  - _USEMAINNORMALMAPASNORMALDIRECTION_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: ffbd8538a0a5fdf4e87af7a0df5aff8c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 2800000, guid: 838baf528e6c32446bbb0d3b465528ff, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -87,7 +108,9 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
+    - _AlphaCutoff: 0.5
     - _AmountSparkle: 0.8
     - _AoIntensity: 1
     - _AoIntensity1: 1
@@ -99,7 +122,7 @@ Material:
     - _ChannelSelectionMask: 0
     - _ContrastDetailMap: 1
     - _ContrastDotMask: 1.33
-    - _ContrastSparkles: 10
+    - _ContrastSparkles: 1
     - _CrystalsIntensity: 1
     - _Cutoff: 0.5
     - _Desaturatecrystals: 0
@@ -125,6 +148,7 @@ Material:
     - _IntensityScaleNormal1: 0.3
     - _IntensityScaleNormal2: 0.3
     - _InvertABaseColor: 0
+    - _InvertABaseColor1: 0
     - _InvertMask: 0
     - _MainWave: 1
     - _Metallic: 1
@@ -145,6 +169,7 @@ Material:
     - _ScaleFBDetailsNormal: 0.5
     - _ShadowMask: 1
     - _Size: 0.512
+    - _Smoothness: 0.65
     - _SmoothnessTextureChannel: 0
     - _Source: 0
     - _SourceMask: 0
@@ -176,6 +201,7 @@ Material:
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorCubemap1: {r: 1, g: 1, b: 1, a: 1}
     - _DetailColor: {r: 1, g: 1, b: 1, a: 0}
@@ -184,3 +210,4 @@ Material:
     - _GlobalXYTilingXYZWOffsetXY1: {r: 1, g: 1, b: 0, a: 0}
     - _OffsetFBDetailsNormal: {r: 1, g: 1, b: 0, a: 0}
     - _XColumnsYRowsZSpeedWStrartFrameNormal: {r: 8, g: 8, b: 0.25, a: 0}
+  m_BuildTextureStacks: []

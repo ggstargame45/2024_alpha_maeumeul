@@ -323,6 +323,7 @@ GameObject:
   - component: {fileID: 8762848591191598918}
   - component: {fileID: 7432507954576621038}
   - component: {fileID: 8750850057438120699}
+  - component: {fileID: 7836674370328569989}
   m_Layer: 0
   m_Name: Check List
   m_TagString: CheckList
@@ -469,6 +470,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 818f66f138c42454883d407a70426090, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7836674370328569989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7159783551628439697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4005bd80e43781e4bbda3078b891d46e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8966101016854734097

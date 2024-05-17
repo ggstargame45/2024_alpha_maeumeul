@@ -20,12 +20,16 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 2800000, guid: 8ae8b6f0b734f34409fb513133ecccb8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailMask:
-        m_Texture: {fileID: 2800000, guid: b0e746f73a977e64990f90446f7f7f9b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 12375d82af179b84a9ddbbc0f8831279, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DotMask:
@@ -45,7 +49,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: b0e746f73a977e64990f90446f7f7f9b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 12375d82af179b84a9ddbbc0f8831279, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SparkleMap:
@@ -58,14 +62,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Addsmooth: 0
-    - _AmountSparkle: 0.989
+    - _AlphaCutoff: 0.5
+    - _AmountSparkle: 1
     - _AoIntensity: 0.56
     - _AoMask: 0
-    - _Brightness: 1
-    - _BumpScale: 0.75
-    - _ContrastDetailMap: 12.92
+    - _Brightness: 1.31
+    - _BumpScale: 1
+    - _ContrastDetailMap: 10
     - _ContrastDotMask: 0
-    - _ContrastSparkles: 0
+    - _ContrastSparkles: 10
     - _CrystalsIntensity: 1
     - _Desaturatecrystals: 0.352
     - _DirectionalLightOnly: 1
@@ -75,27 +80,30 @@ Material:
     - _IntensityDotMask: 1
     - _IntensityMask: 1
     - _InvertABaseColor: 0
+    - _InvertABaseColor1: 0
     - _InvertMask: 0
     - _LerpsmoothWB: 0
     - _Metallic: 0.75
-    - _Parallax: 0.011
+    - _Parallax: 0.032
     - _Parallax1: 0
     - _Saturation: 0
     - _ShadowMask: 1
+    - _Smoothness: 0.05
     - _Source: 0
     - _SourceMask: 0
     - _SpaceProjection: 1
     - _SparkleSource: 1
-    - _SpreadDetailMap: 0.391
+    - _SpreadDetailMap: 0.55
     - _SpreadDotMask: 0.6
     - _TilingCrystals: 0.05
-    - _TilingDotMask: 4
+    - _TilingDotMask: 6
     - _TilingInstance: 0.65
     - _UseBaseColorDot: 0
     - _VisualizeMask: 0
     - _VisualizeSparkle: 0
     - __dirty: 0
     m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _GlobalXYTilingXYZWOffsetXY: {r: 1, g: 1, b: 0, a: 0}

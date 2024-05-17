@@ -760,6 +760,7 @@ GameObject:
   - component: {fileID: 6156199773128338697}
   - component: {fileID: 6767714008599602758}
   - component: {fileID: 7598342087840583496}
+  - component: {fileID: 4292200945730368716}
   m_Layer: 11
   m_Name: Book 2
   m_TagString: Untagged
@@ -971,6 +972,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff4db879f60aecc4d961d827845243ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4292200945730368716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2538028262859122220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4005bd80e43781e4bbda3078b891d46e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2753718166755668252
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,6 +1029,7 @@ GameObject:
   - component: {fileID: 8677947483442860137}
   - component: {fileID: 4898027650026902198}
   - component: {fileID: 9080872550351369477}
+  - component: {fileID: 6953418498871290898}
   m_Layer: 11
   m_Name: Book 3
   m_TagString: Untagged
@@ -1225,6 +1239,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4db879f60aecc4d961d827845243ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6953418498871290898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2900487593236364671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4005bd80e43781e4bbda3078b891d46e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3288361609843149961
@@ -2336,6 +2362,7 @@ GameObject:
   - component: {fileID: 4640424050383819084}
   - component: {fileID: 19611319352354234}
   - component: {fileID: 6581098183080297358}
+  - component: {fileID: 3068365669519092558}
   m_Layer: 11
   m_Name: Book 1
   m_TagString: Untagged
@@ -2545,6 +2572,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4db879f60aecc4d961d827845243ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3068365669519092558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5216222192653874718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4005bd80e43781e4bbda3078b891d46e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5221214428785899824
