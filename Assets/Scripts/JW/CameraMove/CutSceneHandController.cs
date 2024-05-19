@@ -7,29 +7,26 @@ using UnityEngine.UIElements;
 
 public class CutSceneHandController : MonoBehaviour
 {
-    public GameObject rightHand;
-    public UnityEvent pencilCase;
-    public void GotoPencilCase()
+    public void GotoSleep()
     {
         StopAllCoroutines();
-        StartCoroutine(Process(0.3f, new Vector3(-0.056f, 0.866f, 0.541f), new Vector3(0f, 0f, 0f), pencilCase));
+        StartCoroutine(Process(2f, new Vector3(0.34f, 0.872f, 0.247f), new Vector3(0f, 57.8f, -90.583f)));
     }
 
-    private IEnumerator Process(float second, Vector3 position, Vector3 rotation, UnityEvent action)
+    private IEnumerator Process(float second, Vector3 pos, Vector3 rot)
     {
         float wait = 0.01f;
         var wfs = new WaitForSeconds(wait);
-        float now = 0;
-        Vector3 startPosition = rightHand.transform.position;
-        Vector3 startRotation = rightHand.transform.rotation.eulerAngles;
+        float now = 0f;
+        Vector3 startPosition = gameObject.transform.position;
+        Vector3 startRotation = gameObject.transform.rotation.eulerAngles;
         while(now < second)
         {
-            rightHand.transform.position = ((startPosition * (1 - (now / second))) + (position * (now / second)));
-            rightHand.transform.localEulerAngles = (startRotation * ((1 - now) / second) + (rotation * (now / second)) / 2);
+            gameObject.transform.localPosition = (startPosition * (1 - (now / second))) + (pos * (now / second));
+            gameObject.transform.localEulerAngles = (startRotation * (1 - (now / second)) + (rot * (now / second)));
             now += wait;
             yield return wfs;
         }
-        action?.Invoke();
         yield break;
     }
 }

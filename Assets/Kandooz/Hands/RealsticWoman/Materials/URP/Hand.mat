@@ -716,7 +716,7 @@ Material:
     - __dirty: 1
     m_Colors:
     - Color_9087C64: {r: 1, g: 1, b: 1, a: 1}
-    - Color_E55BBF4A: {r: 1, g: 0, b: 0, a: 1}
+    - Color_E55BBF4A: {r: 0.7735849, g: 0.49991098, b: 0.49991098, a: 1}
     - _AlbedoTint: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 1, g: 0, b: 0, a: 1}
     - _BaseColor0: {r: 1, g: 1, b: 1, a: 1}
