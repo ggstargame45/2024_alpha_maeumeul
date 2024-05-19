@@ -18,11 +18,11 @@ public class CutAwayManager : MonoBehaviour
     private void OnEnable()
     {
         Next();
-        index += 1;
     }
 
     public void Next()
     {
+        if (index >= actions.Count) return;
         StopAllCoroutines();
         StartCoroutine(Process(index));
         index += 1;
@@ -33,6 +33,7 @@ public class CutAwayManager : MonoBehaviour
         var wait = new WaitForSeconds(actions[index].waitSeconds);
         yield return wait;
         actions[index].CutAwayEvent?.Invoke();
+        Next();
         yield break;
     }
 }

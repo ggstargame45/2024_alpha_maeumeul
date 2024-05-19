@@ -16,7 +16,6 @@ public class CutSceneManager : MonoBehaviour
     public string vrName = "";
     public GameObject mainCamera;
     public GameObject leftHand;
-    public GameObject rightHand;
     public List<CutAway> cutAways;
     private int index = 0;
 
@@ -51,7 +50,6 @@ public class CutSceneManager : MonoBehaviour
         vr.SetActive(false);
         mainCamera.SetActive(true);
         leftHand.SetActive(true);
-        rightHand.SetActive(true);
         NextScene();
         yield break;
     }
