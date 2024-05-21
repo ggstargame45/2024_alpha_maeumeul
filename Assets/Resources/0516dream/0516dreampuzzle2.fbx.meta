@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: baac6112249686448be19d125d380c96
+=======
+guid: 7041484f268f68d4cb6f70688f587080
+>>>>>>> origin/design/jiun2
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: c2bba61fb1d61f64bb1a1878be2de3de
+=======
+guid: 28189e1a944f71b42b68a5945d661f40
+>>>>>>> origin/design/jiun2
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
