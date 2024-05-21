@@ -2,24 +2,41 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Road S_Sidewalk
   m_Shader: {fileID: 4800000, guid: ee8d64f62a4fbe1409d55fbb975a4366, type: 3}
-  m_ShaderKeywords: _CHANNELSELECTIONMASK_RED _DETAILWAVE_ON _DUPLICATETEXTUREATLASNORMAL_ON
-    _EMISSION _ENABLEDETAILMASK_ON _MAINWAVE_ON _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
-    _SOURCEMASK_DETAILMASK _SOURCE_METALLICALPHA _SPACEPROJECTION_VERTEXPOSITION
-    _SPARKLESOURCE_EMISSIVESPARKLES _USEAOFROMMAINPROPERTIES_ON _USEEMISSIONFROMMAINPROPERTIES_ON
-    _USEMAINNORMALMAPASNORMALDIRECTION_ON _VISUALIZESPARKLE_NONE
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _SOURCE_METALLICALPHA
+  - _SPACEPROJECTION_VERTEXPOSITION
+  - _SPARKLESOURCE_EMISSIVESPARKLES
+  - _VISUALIZESPARKLE_NONE
+  m_InvalidKeywords:
+  - _CHANNELSELECTIONMASK_RED
+  - _DETAILWAVE_ON
+  - _DUPLICATETEXTUREATLASNORMAL_ON
+  - _EMISSION
+  - _ENABLEDETAILMASK_ON
+  - _MAINWAVE_ON
+  - _METALLICGLOSSMAP
+  - _NORMALMAP
+  - _PARALLAXMAP
+  - _SOURCEMASK_DETAILMASK
+  - _USEAOFROMMAINPROPERTIES_ON
+  - _USEEMISSIONFROMMAINPROPERTIES_ON
+  - _USEMAINNORMALMAPASNORMALDIRECTION_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -87,6 +104,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _AmountSparkle: 0.8
     - _AoIntensity: 1
@@ -184,3 +202,4 @@ Material:
     - _GlobalXYTilingXYZWOffsetXY1: {r: 1, g: 1, b: 0, a: 0}
     - _OffsetFBDetailsNormal: {r: 1, g: 1, b: 0, a: 0}
     - _XColumnsYRowsZSpeedWStrartFrameNormal: {r: 8, g: 8, b: 0.25, a: 0}
+  m_BuildTextureStacks: []
