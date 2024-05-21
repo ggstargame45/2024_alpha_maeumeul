@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 3923677914a34a945a9e03c9535b0f19
+=======
 guid: 22aba32e403f67343976f8c9e3eefc27
+>>>>>>> design/minju
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}

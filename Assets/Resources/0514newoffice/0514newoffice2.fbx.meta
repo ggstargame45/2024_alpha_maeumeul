@@ -1,5 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Resources/0514newoffice/0514newoffice2.fbx.meta
 guid: f736ab7057ef63647889cf0da36d6098
+========
+guid: 0b4370b33847c2740af6b383707614b3
+>>>>>>>> test:Assets/Resources/0518Dream/0518dream.fbx.meta
+=======
+<<<<<<<< HEAD:Assets/Resources/0514newoffice/0514newoffice.fbx.meta
+guid: c9735c530e591274cb1279b1857cc6be
+========
+guid: 6f7e8e37557645f4fb193a58f8f77261
+>>>>>>>> test:Assets/Resources/0514newoffice/0514newoffice2.fbx.meta
+>>>>>>> test
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []

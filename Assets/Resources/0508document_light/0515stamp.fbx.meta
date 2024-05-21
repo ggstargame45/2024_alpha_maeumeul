@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Resources/0508document_light/0515stamp.fbx.meta
 guid: 541e0fc25053b914291101d6f5f2e250
+========
+guid: 39a6a7e80c94ab04b828eb8a4ce268eb
+>>>>>>>> test:Assets/Resources/0514newoffice/0514newoffice.fbx.meta
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
