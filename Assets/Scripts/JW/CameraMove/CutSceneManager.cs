@@ -47,7 +47,7 @@ public class CutSceneManager : MonoBehaviour
         var wfs = new WaitForSeconds(0.2f);
         yield return wfs;
         GameObject vr = GameObject.Find(vrName);
-        vr.SetActive(false);
+        if (vr) vr.SetActive(false);
         mainCamera.SetActive(true);
         leftHand.SetActive(true);
         NextScene();

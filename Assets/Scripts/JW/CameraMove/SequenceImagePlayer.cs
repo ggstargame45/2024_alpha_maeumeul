@@ -43,7 +43,7 @@ public class SequenceImagePlayer : MonoBehaviour
     private IEnumerator Process()
     {
         index = 0;
-        gameObject.GetComponent<Renderer>().material.color = new Color(0f, 0f, 0f, 1f);
+        gameObject.GetComponent<Renderer>().material.color = new Color(1f, 1f, 1f, 1f);
         var wfs = new WaitForSeconds(1f / 60f);
         while(index < textures.Length)
         {
