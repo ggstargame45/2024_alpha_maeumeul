@@ -1293,7 +1293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2387079830924167892}
   m_Layer: 0
-  m_Name: Cleaning Set for CutScene
+  m_Name: Cleaning Set for CutScene 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
