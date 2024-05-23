@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Anchor
   - CheckList
+  - PuzzleTile
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,6 @@ TagManager:
   - SocketInteractable
   - 
   - asdasdas
-  - 
   - 
   - 
   - 

@@ -21,6 +21,12 @@ namespace Autohand {
     public class Grabbable : GrabbableBase, IGrabbableEvents {
 
 
+        public bool hasOtherPlacePointMesh = false;
+
+        public GameObject originalMesh;
+        public GameObject otherPlacePointMesh;
+
+
         [Tooltip("This will copy the given grabbables settings to this grabbable when applied"), OnValueChanged("EditorCopyGrabbable")]
         public Grabbable CopySettings;
 

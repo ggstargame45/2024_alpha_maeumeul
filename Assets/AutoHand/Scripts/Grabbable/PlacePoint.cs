@@ -180,6 +180,24 @@ namespace Autohand {
                 }
             }
 
+            OnPlaceEvent += (point, grabbable) => {
+                if (grabbable.hasOtherPlacePointMesh)
+                {
+                    grabbable.originalMesh.SetActive(false);
+                    grabbable.otherPlacePointMesh.SetActive(true);
+                }
+            };
+
+            OnRemoveEvent += (point, grabbable) =>
+            {
+                if (grabbable.hasOtherPlacePointMesh)
+                {
+                    grabbable.originalMesh.SetActive(true);
+                    grabbable.otherPlacePointMesh.SetActive(false);
+                }
+            };
+
+
             CheckInvalidSettings();
 
             if(startPlaced != null && startPlaced.childPlacePoints.Count == 0)

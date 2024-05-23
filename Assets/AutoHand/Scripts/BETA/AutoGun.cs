@@ -24,10 +24,10 @@ namespace Autohand {
         public bool ignoreMe1;
         [Tooltip("The local forward of this transform is where the bullet raycast will come from")]
         public Transform shootForward;
-        [Tooltip("(Optional) GrabbableHeldJoint recommended for triggering the LoadSlide event, if connected this will trigger the slide movement when shooting ")]
-        public GrabbableHeldJoint slideJoint;
-        [Tooltip("The place point for the ammo")]
-        public PlacePoint magazinePoint;
+        //[Tooltip("(Optional) GrabbableHeldJoint recommended for triggering the LoadSlide event, if connected this will trigger the slide movement when shooting ")]
+        //public GrabbableHeldJoint slideJoint;
+        //[Tooltip("The place point for the ammo")]
+        //public PlacePoint magazinePoint;
 
         [AutoSmallHeader("Gun Settings")]
         public bool ignoreMe2;
@@ -56,6 +56,8 @@ namespace Autohand {
         public UnityAmmoEvent OnAmmoRemoveEvent;
         public UnityGunSlideEvent OnSlideEvent;
 
+
+
         protected AutoAmmo loadedAmmo;
         internal Grabbable grabbable;
         protected bool slideLoaded = false;
@@ -66,26 +68,27 @@ namespace Autohand {
 
         private void Start() {
             grabbable = GetComponent<Grabbable>();
-            if(magazinePoint != null)
-                magazinePoint.dontAllows.Add(grabbable);
+
+            //if(magazinePoint != null)
+            //    magazinePoint.dontAllows.Add(grabbable);
 
         }
 
         private void OnEnable() {
-            if(magazinePoint != null) {
-                magazinePoint.OnPlaceEvent += OnMagPlace;
-                magazinePoint.OnRemoveEvent += OnMagRemove;
-            }
+            //if(magazinePoint != null) {
+            //    magazinePoint.OnPlaceEvent += OnMagPlace;
+            //    magazinePoint.OnRemoveEvent += OnMagRemove;
+            //}
         }
         private void OnDisable() {
-            if(magazinePoint != null) {
-                magazinePoint.OnPlaceEvent -= OnMagPlace;
-                magazinePoint.OnRemoveEvent -= OnMagRemove;
-            }
+            //if(magazinePoint != null) {
+            //    magazinePoint.OnPlaceEvent -= OnMagPlace;
+            //    magazinePoint.OnRemoveEvent -= OnMagRemove;
+            //}
         }
 
         private void FixedUpdate() {
-            if(squeezingTrigger && automaticFireRate > 0 && slideLoaded && Time.fixedTime-lastFireTime > automaticFireRate)
+            if(squeezingTrigger && automaticFireRate > 0 && Time.fixedTime-lastFireTime > automaticFireRate)
                 Shoot();
             else if(squeezingTrigger && !lastSqueezingTrigger && automaticFireRate <= 0)
                 Shoot();
@@ -107,37 +110,38 @@ namespace Autohand {
 
 
         public void Shoot() {
-            if(slideLoaded) {
+            if(true) {
                 grabbable.body.AddForceAtPosition(-shootForward.forward * recoilForce / 10f, shootForward.position);
                 grabbable.body.AddForceAtPosition(shootForward.up * recoilForce, shootForward.position);
                 OnShoot?.Invoke(this);
 
-                if(useBulletPenetration){
-                    var raycasthits = Physics.RaycastAll(shootForward.position, shootForward.forward, maxHitDistance, ~0, QueryTriggerInteraction.Ignore);
-                    if(raycasthits.Length > 0) {
-                        foreach(var hit in raycasthits) {
-                            if(hit.rigidbody != grabbable.body)
-                                OnHit(hit);
-                            if(hit.rigidbody == null)
-                                break;
-                        }
-                    }
-                }
-                else if(Physics.Raycast(shootForward.position, shootForward.forward, out var hit, maxHitDistance, ~0, QueryTriggerInteraction.Ignore)){
-                    if(hit.rigidbody != grabbable.body)
-                        OnHit(hit);
-                    else
-                        Debug.LogError("Gun is shooting itself, make sure the shootforward transform is not inside a collider", this);
-                }
+
+                //if (useBulletPenetration){
+                //    var raycasthits = Physics.RaycastAll(shootForward.position, shootForward.forward, maxHitDistance, ~0, QueryTriggerInteraction.Ignore);
+                //    if(raycasthits.Length > 0) {
+                //        foreach(var hit in raycasthits) {
+                //            if(hit.rigidbody != grabbable.body)
+                //                OnHit(hit);
+                //            if(hit.rigidbody == null)
+                //                break;
+                //        }
+                //    }
+                //}
+                //else if(Physics.Raycast(shootForward.position, shootForward.forward, out var hit, maxHitDistance, ~0, QueryTriggerInteraction.Ignore)){
+                //    if(hit.rigidbody != grabbable.body)
+                //        OnHit(hit);
+                //    else
+                //        Debug.LogError("Gun is shooting itself, make sure the shootforward transform is not inside a collider", this);
+                //}
 
                 lastFireTime = Time.fixedTime;
-                FireLoadSlide();
+                //FireLoadSlide();
             }
             else
                 OnEmptyShoot?.Invoke(this);
 
-            if(autoEjectEmptyClip && loadedAmmo != null && loadedAmmo.currentAmmo == 0 && !slideLoaded)
-                magazinePoint?.Remove();
+            //if(autoEjectEmptyClip && loadedAmmo != null && loadedAmmo.currentAmmo == 0 && !slideLoaded)
+            //    magazinePoint?.Remove();
         }
 
 
@@ -173,12 +177,12 @@ namespace Autohand {
 
 
         /// <summary>Returns ammo in count in current clip plus slide</summary>
-        public int GetAmmo() {
-            int ammo = slideLoaded ? 1 : 0;
-            if(loadedAmmo != null)
-                ammo += loadedAmmo.currentAmmo;
-            return magazinePoint == null ? 1 : ammo;
-        }
+        //public int GetAmmo() {
+        //    int ammo = slideLoaded ? 1 : 0;
+        //    if(loadedAmmo != null)
+        //        ammo += loadedAmmo.currentAmmo;
+        //    return magazinePoint == null ? 1 : ammo;
+        //}
 
 
         void OnMagPlace(PlacePoint point, Grabbable mag) {
@@ -205,3 +209,5 @@ namespace Autohand {
         }
     }
 }
+
+

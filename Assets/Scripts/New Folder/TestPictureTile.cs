@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TestPictureTile : MonoBehaviour
 {
+
+    public bool isRotating = false;
     void Start()
     {
         //StartCoroutine(Rotate180Random());
@@ -24,12 +26,19 @@ public class TestPictureTile : MonoBehaviour
         Vector3 startRotation = transform.rotation.eulerAngles;
         Vector3 endRotation = startRotation + new Vector3(180, 0, 0);
 
+        isRotating = true;
+
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
             transform.rotation = Quaternion.Euler(Vector3.Lerp(startRotation, endRotation, elapsed / duration));
             yield return null;
         }
+
+        transform.rotation = Quaternion.Euler(endRotation);
+        isRotating = false;
+
+       
     }
 
     //A coroutine that executes Rotate180() wait a random amount of time between 1 and 3 seconds, then executes Rotate180() again, and so on
@@ -42,5 +51,14 @@ public class TestPictureTile : MonoBehaviour
         }
     }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!isRotating && other.tag=="Bullet")
+        {
+            StartCoroutine(Rotate180());
+            
+        }
+    }
+
+
 }

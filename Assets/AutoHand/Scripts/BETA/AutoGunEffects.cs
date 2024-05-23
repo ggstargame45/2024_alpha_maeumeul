@@ -83,14 +83,14 @@ namespace Autohand {
         void OnSlideLoaded(AutoGun gun, SlideLoadType loadType) {
 
             if(loadType == SlideLoadType.ShotLoaded){
-                if(gun.slideJoint != null) {
-                    if(Mathf.Abs(gun.slideJoint.xMinLimit) >= gun.slideJoint.xMaxLimit &&
-                        Mathf.Abs(gun.slideJoint.yMinLimit) >= gun.slideJoint.yMaxLimit &&
-                        Mathf.Abs(gun.slideJoint.zMinLimit) >= gun.slideJoint.zMaxLimit)
-                        gun.slideJoint.SetJointMin();
-                    else
-                        gun.slideJoint.SetJointMax();
-                }
+                //if(gun.slideJoint != null) {
+                //    if(Mathf.Abs(gun.slideJoint.xMinLimit) >= gun.slideJoint.xMaxLimit &&
+                //        Mathf.Abs(gun.slideJoint.yMinLimit) >= gun.slideJoint.yMaxLimit &&
+                //        Mathf.Abs(gun.slideJoint.zMinLimit) >= gun.slideJoint.zMaxLimit)
+                //        gun.slideJoint.SetJointMin();
+                //    else
+                //        gun.slideJoint.SetJointMax();
+                //}
 
                 EjectShell();
             }

@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace MasterStylizedProjectile
 {
@@ -17,6 +19,8 @@ namespace MasterStylizedProjectile
         public bool isTargeting;
         public Transform target;
         public float rotSpeed = 0;
+
+        public UnityEvent<Collider> colliderEvent;
         private void Start()
         {
             if (bulletClip != null)
@@ -25,7 +29,18 @@ namespace MasterStylizedProjectile
                 audio.clip = bulletClip;
                 audio.Play();
             }
+
+            //Destroy after 5 seconds
+            StartCoroutine(DestroyAfterTime());
         }
+
+        //Coroutine that destroys the object after 5 seconds
+        IEnumerator DestroyAfterTime()
+        {
+            yield return new WaitForSeconds(5);
+            Destroy(gameObject);
+        }
+
         private void Update()
         {
             Vector3 forward = Vector3.forward;
