@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Stamp : MonoBehaviour
 {
+    public UnityEvent stampEvent;
     public float distance = 0.2f;
     bool canUse = true;
 
@@ -12,6 +14,7 @@ public class Stamp : MonoBehaviour
         if (!canUse) return;
         if (!StampAngleCheck()) return;
         canUse = false;
+        stampEvent?.Invoke();
         RaycastHit[] hits;
         hits = Physics.RaycastAll(gameObject.transform.position, transform.up * -1, distance);
         for (int i = 0; i < hits.Length; i++)

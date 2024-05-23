@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class WorkCheck : MonoBehaviour
 {
@@ -9,14 +10,19 @@ public class WorkCheck : MonoBehaviour
     public GameObject cleanWork;
     [Space]
     public GameObject[] cleanGrab;
+    public UnityEvent cleanGrabEvent;
     public GameObject[] firstClean;
+    public UnityEvent firstCleanEvent;
     public GameObject[] lastClean;
+    public UnityEvent lastCleanEvent;
     [Space]
     [Space]
     public GameObject stampWork;
     [Space]
     public GameObject[] stampGrab;
+    public UnityEvent stampGrabEvent;
     public GameObject[] firstStamp;
+    public UnityEvent firstStampEvent;
 
     private void Start()
     {
@@ -50,25 +56,30 @@ public class WorkCheck : MonoBehaviour
     private void RingbinderGrab()
     {
         ImagePlay(cleanGrab);
+        cleanGrabEvent?.Invoke();
     }
 
     private void FirstRingbinderClean()
     {
         ImagePlay(firstClean);
+        firstCleanEvent?.Invoke();
     }
 
     private void LastRingbinderClean()
     {
         ImagePlay(lastClean);
+        lastCleanEvent?.Invoke();
     }
 
     private void StampGrab()
     {
         ImagePlay(stampGrab);
+        stampGrabEvent?.Invoke();
     }
 
     private void FirstStamp()
     {
         ImagePlay(firstStamp);
+        firstStampEvent?.Invoke();
     }
 }

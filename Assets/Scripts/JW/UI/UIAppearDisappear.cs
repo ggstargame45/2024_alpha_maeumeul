@@ -20,6 +20,8 @@ public class UIAppearDisappear : MonoBehaviour
     private void OnEnable()
     {
         StopAllCoroutines();
+        var sound = head.GetComponent<AudioSource>();
+        sound?.Play();
         StartCoroutine(Process(true));
     }
 
