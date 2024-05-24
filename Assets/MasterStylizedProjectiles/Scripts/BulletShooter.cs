@@ -33,31 +33,36 @@ namespace MasterStylizedProjectile
 
         public float Speed;
         public float ShootInterval = 0.2f;
+        public float size = 0.3f;
         float LastShootTime = 0;
-         // Start is called before the first frame update
-        void Start()
-        {
+        // // Start is called before the first frame update
+        //void Start()
+        //{
 
-        }
+        //}
 
-        // Update is called once per frame
-        void Update()
-        {
-            if(Input.GetMouseButtonDown(0))
-            {
-                Shoot();
-            }
-            if(Input.GetMouseButton(0))
-            {
-                if (Time.time - LastShootTime > ShootInterval)
-                {
-                    Shoot();
-                }
-            }
-        }
+        //// Update is called once per frame
+        //void Update()
+        //{
+        //    if(Input.GetMouseButtonDown(0))
+        //    {
+        //        Shoot();
+        //    }
+        //    if(Input.GetMouseButton(0))
+        //    {
+        //        if (Time.time - LastShootTime > ShootInterval)
+        //        {
+        //            Shoot();
+        //        }
+        //    }
+        //}
         public void Shoot()
         {
-            StartCoroutine(ShootIE());
+            if (Time.time - LastShootTime > ShootInterval)
+            {
+                StartCoroutine(ShootIE());
+            }
+
         }
         public IEnumerator ShootIE()
         {
@@ -70,13 +75,14 @@ namespace MasterStylizedProjectile
             if (CurEffect.ChargeParticles != null)
             {
                 var ChargePar = Instantiate(CurEffect.ChargeParticles, StartNodeTrans.position, Quaternion.identity);
-                //var onStart = gameObject.AddComponent<AudioTrigger>();
-                //if (CurEffect.ChargeClip != null)
-                //{
-                //    onStart.onClip = CurEffect.startClip;
-                //}
+                ChargePar.transform.localScale *= size;
+                var onStart = gameObject.AddComponent<AudioTrigger>();
+                if (CurEffect.ChargeClip != null)
+                {
+                    onStart.onClip = CurEffect.startClip;
+                }
 
-            
+
                 if (CurEffect.ChargeClip != null)
                 {
                     GameObject AudioObj = new GameObject();
@@ -85,18 +91,20 @@ namespace MasterStylizedProjectile
                     audiosource.Play();
                 }
                 yield return new WaitForSeconds(CurEffect.ChargeParticleTime);
+
                 Destroy(ChargePar.gameObject);
             }
-           
+
         }
         public void DoShoot()
         {
-            var targetPos = GetMouseTargetPos();
+            var targetPos = StartNodeTrans.position + StartNodeTrans.forward * 100;
             var targetDir = targetPos - StartNodeTrans.position;
             targetDir = targetDir.normalized;
             if (CurEffect.StartParticles != null)
             {
                 var StartPar = Instantiate(CurEffect.StartParticles, StartNodeTrans.position, Quaternion.identity);
+                StartPar.transform.localScale *= size;
                 StartPar.transform.forward = targetDir;
 
                 var onStart = StartPar.gameObject.AddComponent<AudioTrigger>();
@@ -109,6 +117,7 @@ namespace MasterStylizedProjectile
             if (CurEffect.BulletParticles != null)
             {
                 var bulletObj = Instantiate(CurEffect.BulletParticles, StartNodeTrans.position, Quaternion.identity);
+                bulletObj.transform.localScale *= size;
                 bulletObj.transform.forward = targetDir;
 
                 var bullet = bulletObj.gameObject.AddComponent<Bullet>();
@@ -117,15 +126,15 @@ namespace MasterStylizedProjectile
                 bullet.isTargeting = CurEffect.isTargeting;
                 if (CurEffect.isTargeting)
                 {
-                    var target = FindNearestTarget("Respawn");
-                    if (target != null)
-                    {
-                        bullet.rotSpeed = CurEffect.RotSpeed;
-                        bullet.target = target.transform;
-                    }
+                    ////var target = FindNearestTarget("Respawn");
+                    //if (target != null)
+                    //{
+                    //    bullet.rotSpeed = CurEffect.RotSpeed;
+                    //    bullet.target = target.transform;
+                    //}
                 }
 
-                   
+
                 if (CurEffect.hitClip != null)
                 {
                     bullet.onHitClip = CurEffect.hitClip;
@@ -140,28 +149,28 @@ namespace MasterStylizedProjectile
                 collider.isTrigger = true;
                 collider.radius = 0.6f;
             }
-      
+
         }
 
 
-        public Vector3 GetMouseTargetPos()
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //public Vector3 GetMouseTargetPos()
+        //{
+        //    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            RaycastHit hit = new RaycastHit();
-            if (Physics.Raycast(ray,out hit,100))
-            {
-                return hit.point;
-            }
-            return Vector3.zero;
-        }
+        //    RaycastHit hit = new RaycastHit();
+        //    if (Physics.Raycast(ray,out hit,100))
+        //    {
+        //        return hit.point;
+        //    }
+        //    return Vector3.zero;
+        //}
 
-        public GameObject FindNearestTarget(string tag)
-        {
-            var gameObjects = GameObject.FindGameObjectsWithTag(tag).ToList().OrderBy(
-                (x) => Vector3.Distance(transform.position, x.transform.position));
-            return gameObjects.FirstOrDefault();
-        }
+        //public GameObject FindNearestTarget(string tag)
+        //{
+        //    var gameObjects = GameObject.FindGameObjectsWithTag(tag).ToList().OrderBy(
+        //        (x) => Vector3.Distance(transform.position, x.transform.position));
+        //    return gameObjects.FirstOrDefault();
+        //}
     }
 
 }

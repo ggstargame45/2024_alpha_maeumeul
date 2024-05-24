@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Autohand {
+namespace Autohand
+{
     [RequireComponent(typeof(AutoGun))]
-    public class AutoGunEffects : MonoBehaviour {
+    public class AutoGunEffects : MonoBehaviour
+    {
 
 
         [AutoSmallHeader("Visual Effects")]
@@ -43,27 +45,32 @@ namespace Autohand {
         AutoGun gun;
 
 
-        private void OnEnable(){
+        private void OnEnable()
+        {
             gun = GetComponent<AutoGun>();
             gun.OnShoot.AddListener(OnShoot);
             gun.OnEmptyShoot.AddListener(OnEmptyShoot);
             gun.OnSlideEvent.AddListener(OnSlideLoaded);
         }
 
-        private void OnDisable(){
+        private void OnDisable()
+        {
             gun.OnShoot.RemoveListener(OnShoot);
             gun.OnEmptyShoot.RemoveListener(OnEmptyShoot);
             gun.OnSlideEvent.RemoveListener(OnSlideLoaded);
         }
 
-        private void FixedUpdate() {
+        private void FixedUpdate()
+        {
             CheckBulletLifetime();
             CheckParticlPlaying();
 
         }
 
-        void CreateShootParticle() {
-            if(shootParticle != null) {
+        void CreateShootParticle()
+        {
+            if (shootParticle != null)
+            {
                 var newShootParticle = GameObject.Instantiate(shootParticle);
                 newShootParticle.transform.position = gun.shootForward.position;
                 newShootParticle.transform.forward = gun.shootForward.forward;
@@ -71,51 +78,61 @@ namespace Autohand {
             }
         }
 
-        void OnShoot(AutoGun gun){
+        void OnShoot(AutoGun gun)
+        {
             shootSound?.PlayOneShot(shootSound.clip);
             CreateShootParticle();
         }
 
-        void OnEmptyShoot(AutoGun gun){
+        void OnEmptyShoot(AutoGun gun)
+        {
             emptyShootSound?.PlayOneShot(emptyShootSound.clip);
         }
 
-        void OnSlideLoaded(AutoGun gun, SlideLoadType loadType) {
+        void OnSlideLoaded(AutoGun gun, SlideLoadType loadType)
+        {
 
-            if(loadType == SlideLoadType.ShotLoaded){
-                if(gun.slideJoint != null) {
-                    if(Mathf.Abs(gun.slideJoint.xMinLimit) >= gun.slideJoint.xMaxLimit &&
-                        Mathf.Abs(gun.slideJoint.yMinLimit) >= gun.slideJoint.yMaxLimit &&
-                        Mathf.Abs(gun.slideJoint.zMinLimit) >= gun.slideJoint.zMaxLimit)
-                        gun.slideJoint.SetJointMin();
-                    else
-                        gun.slideJoint.SetJointMax();
-                }
+            if (loadType == SlideLoadType.ShotLoaded)
+            {
+                //if(gun.slideJoint != null) {
+                //    if(Mathf.Abs(gun.slideJoint.xMinLimit) >= gun.slideJoint.xMaxLimit &&
+                //        Mathf.Abs(gun.slideJoint.yMinLimit) >= gun.slideJoint.yMaxLimit &&
+                //        Mathf.Abs(gun.slideJoint.zMinLimit) >= gun.slideJoint.zMaxLimit)
+                //        gun.slideJoint.SetJointMin();
+                //    else
+                //        gun.slideJoint.SetJointMax();
+                //}
 
                 EjectShell();
             }
-            else if(gun.IsSlideLoaded()) {
+            else if (gun.IsSlideLoaded())
+            {
                 EjectBullet();
             }
 
         }
 
-        public void EjectBullet() {
-            if(bullet != null) {
+        public void EjectBullet()
+        {
+            if (bullet != null)
+            {
                 GameObject newBullet;
-                if(bulletPool.Count > 0) {
+                if (bulletPool.Count > 0)
+                {
                     newBullet = bulletPool[0];
                     bulletPool.RemoveAt(0);
                     newBullet.transform.position = shellEjectionSpawnPoint.position;
                     newBullet.transform.rotation = shellEjectionSpawnPoint.rotation;
                     newBullet.SetActive(true);
                 }
-                else {
+                else
+                {
                     newBullet = Instantiate(bullet, shellEjectionSpawnPoint.position, shellEjectionSpawnPoint.rotation);
                 }
 
-                if(newBullet.CanGetComponent<Rigidbody>(out var body)) {
-                    if(AutoHandPlayer.Instance.IsHolding(gun.grabbable))
+                if (newBullet.CanGetComponent<Rigidbody>(out var body))
+                {
+                    if (AutoHandPlayer.Instance.IsHolding(gun.grabbable))
                         body.velocity = AutoHandPlayer.Instance.body.velocity;
                     body.velocity += gun.grabbable.body.velocity;
                     body.AddForce(shellEjectionDirection.forward * shellEjectionForce, ForceMode.Force);
@@ -124,22 +141,27 @@ namespace Autohand {
             }
         }
 
-        public void EjectShell() {
-            if(bulletShell != null) {
+        public void EjectShell()
+        {
+            if (bulletShell != null)
+            {
                 GameObject newShell;
-                if(bulletShellPool.Count > 0) {
+                if (bulletShellPool.Count > 0)
+                {
                     newShell = bulletShellPool[0];
                     bulletShellPool.RemoveAt(0);
                     newShell.transform.position = shellEjectionSpawnPoint.position;
                     newShell.transform.rotation = shellEjectionSpawnPoint.rotation;
                     newShell.SetActive(true);
                 }
-                else {
+                else
+                {
                     newShell = Instantiate(bulletShell, shellEjectionSpawnPoint.position, shellEjectionSpawnPoint.rotation);
                 }
 
-                if(newShell.CanGetComponent<Rigidbody>(out var body)) {
-                    if(AutoHandPlayer.Instance.IsHolding(gun.grabbable))
+                if (newShell.CanGetComponent<Rigidbody>(out var body))
+                {
+                    if (AutoHandPlayer.Instance.IsHolding(gun.grabbable))
                         body.velocity = AutoHandPlayer.Instance.body.velocity;
                     body.velocity += gun.grabbable.body.velocity;
                     body.AddForce(shellEjectionDirection.forward * shellEjectionForce, ForceMode.Force);
@@ -152,13 +174,17 @@ namespace Autohand {
 
 
 
-        void CheckBulletLifetime() {
-            if(bulletLifetimeTracker.Count > 0) {
+        void CheckBulletLifetime()
+        {
+            if (bulletLifetimeTracker.Count > 0)
+            {
                 var bulletKeys = new GameObject[bulletLifetimeTracker.Count];
                 bulletLifetimeTracker.Keys.CopyTo(bulletKeys, 0);
-                foreach(var bullet in bulletKeys) {
+                foreach (var bullet in bulletKeys)
+                {
                     bulletLifetimeTracker[bullet] -= Time.deltaTime;
-                    if(bulletLifetimeTracker[bullet] <= 0) {
+                    if (bulletLifetimeTracker[bullet] <= 0)
+                    {
                         bullet.SetActive(false);
                         bulletPool.Add(bullet);
                         bulletLifetimeTracker.Remove(bullet);
@@ -166,12 +192,15 @@ namespace Autohand {
                 }
             }
 
-            if(shellLifetimeTracker.Count > 0) {
+            if (shellLifetimeTracker.Count > 0)
+            {
                 var shellKeys = new GameObject[shellLifetimeTracker.Count];
                 shellLifetimeTracker.Keys.CopyTo(shellKeys, 0);
-                foreach(var shell in shellKeys) {
+                foreach (var shell in shellKeys)
+                {
                     shellLifetimeTracker[shell] -= Time.deltaTime;
-                    if(shellLifetimeTracker[shell] <= 0) {
+                    if (shellLifetimeTracker[shell] <= 0)
+                    {
                         shell.SetActive(false);
                         bulletShellPool.Add(shell);
                         shellLifetimeTracker.Remove(shell);
@@ -182,12 +211,15 @@ namespace Autohand {
 
 
 
-        void CheckParticlPlaying() {
-            if(inactiveParticlePool.Count > 0) {
+        void CheckParticlPlaying()
+        {
+            if (inactiveParticlePool.Count > 0)
+            {
                 var playingKeys = new ParticleSystem[activeParticlePool.Count];
                 activeParticlePool.CopyTo(playingKeys, 0);
-                foreach(var particle in playingKeys) {
-                    if(!particle.isPlaying)
+                foreach (var particle in playingKeys)
+                {
+                    if (!particle.isPlaying)
                         particle.gameObject.SetActive(false);
                     inactiveParticlePool.Add(particle);
                     activeParticlePool.Remove(particle);
