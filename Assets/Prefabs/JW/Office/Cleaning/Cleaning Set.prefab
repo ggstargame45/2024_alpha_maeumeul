@@ -545,7 +545,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.07, y: 0.34, z: 0.29}
+  m_Size: {x: 0.07, y: 0.32, z: 0.26}
   m_Center: {x: 0, y: 0.02, z: -0.02}
 --- !u!114 &1085918874772145136
 MonoBehaviour:
@@ -851,11 +851,14 @@ MonoBehaviour:
   body: {fileID: 535712571676799131}
   hightlightMaterial: {fileID: 0}
   isGrabbable: 1
+  hasOtherPlacePointMesh: 0
+  originalMesh: {fileID: 0}
+  otherPlacePointMesh: {fileID: 0}
   CopySettings: {fileID: 0}
   grabType: 2
   handType: 0
   singleHandOnly: 0
-  instantGrab: 1
+  instantGrab: 0
   useGentleGrab: 0
   maintainGrabOffset: 0
   parentOnGrab: 1
@@ -1262,11 +1265,14 @@ MonoBehaviour:
   body: {fileID: 3651139518987027463}
   hightlightMaterial: {fileID: 0}
   isGrabbable: 1
+  hasOtherPlacePointMesh: 0
+  originalMesh: {fileID: 0}
+  otherPlacePointMesh: {fileID: 0}
   CopySettings: {fileID: 0}
   grabType: 2
   handType: 0
   singleHandOnly: 0
-  instantGrab: 1
+  instantGrab: 0
   useGentleGrab: 0
   maintainGrabOffset: 0
   parentOnGrab: 1
@@ -2378,7 +2384,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.07, y: 0.34, z: 0.29}
+  m_Size: {x: 0.07, y: 0.32, z: 0.26}
   m_Center: {x: 0, y: 0.02, z: -0.02}
 --- !u!114 &6676601257924391087
 MonoBehaviour:
@@ -2749,11 +2755,14 @@ MonoBehaviour:
   body: {fileID: 4100618866938748243}
   hightlightMaterial: {fileID: 0}
   isGrabbable: 1
+  hasOtherPlacePointMesh: 0
+  originalMesh: {fileID: 0}
+  otherPlacePointMesh: {fileID: 0}
   CopySettings: {fileID: 0}
   grabType: 2
   handType: 0
   singleHandOnly: 0
-  instantGrab: 1
+  instantGrab: 0
   useGentleGrab: 0
   maintainGrabOffset: 0
   parentOnGrab: 1
@@ -3297,7 +3306,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.07, y: 0.34, z: 0.29}
+  m_Size: {x: 0.07, y: 0.32, z: 0.26}
   m_Center: {x: 0, y: 0.02, z: -0.02}
 --- !u!114 &8820139487946623556
 MonoBehaviour:
