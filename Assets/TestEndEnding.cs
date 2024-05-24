@@ -3,18 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TestStartLast : MonoBehaviour
+public class TestEndEnding : MonoBehaviour
 {
-    public UnityEvent startLastDreamEvent;
+    public UnityEvent startEndingEvent;
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            startLastDreamEvent.Invoke();
-
-            //disable the gameobject
-            gameObject.SetActive(false);
+            startEndingEvent.Invoke();
         }
     }
 }
