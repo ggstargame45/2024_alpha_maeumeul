@@ -26,12 +26,14 @@ public class DreamManager : MonoBehaviour
 
     public List<Sprite> UIimages;
 
+    public List<GameObject> animationObjects;
+
     public int firstDreamScoreCount = 0;
 
 
     public int lastDreamScoreCount = 0;
 
-
+    private bool usingUI = false;
     private void Start()
     {
         playerRigidBody = VRPlayer.GetComponent<Rigidbody>();
@@ -40,8 +42,8 @@ public class DreamManager : MonoBehaviour
         startFirstDream();
 
 
-
         
+
     }
 
     //fadein corutine
@@ -66,6 +68,50 @@ public class DreamManager : MonoBehaviour
         firstDreamScoreCount++;
     }
 
+
+    public void StartArrangeTaskUI()
+    {
+        if(usingUI)
+        {
+            return;
+        }
+        StartCoroutine(StartArrangeTaskUICoroutine());
+
+    }
+
+    IEnumerator StartArrangeTaskUICoroutine()
+    {
+        for(int i = 0; i<2; i++)
+        {
+            usingUI= true;
+            UIimage.sprite = UIimages[i+6];
+            UIimageObject.SetActive(true);
+            yield return new WaitForSeconds(3.0f);
+            UIimageObject.SetActive(false);
+        }
+        usingUI = false;
+    }
+
+    public void StartShootingTaskUI()
+    {
+        if(usingUI)
+        {
+            return;
+        }
+        StartCoroutine(StartShootingTaskUICoroutine());
+    }
+
+    IEnumerator StartShootingTaskUICoroutine()
+    {
+        usingUI = true;
+
+            UIimage.sprite = UIimages[8];
+            UIimageObject.SetActive(true);
+            yield return new WaitForSeconds(3.0f);
+            UIimageObject.SetActive(false);
+
+    usingUI = false;
+    }
 
     IEnumerator FirstDream()
     {
@@ -111,10 +157,11 @@ public class DreamManager : MonoBehaviour
 
         endingDoor.StartCloseDoor();
 
-        autoHandPlayer.useMovement = false;
+        //autoHandPlayer.useMovement = false;
+        autoHandPlayer.maxMoveSpeed = 0;
+        autoHandPlayer.smoothTurnSpeed = 0;
         autoHandPlayer.useGrounding = false;
         playerRigidBody.useGravity = false;
-        playerRigidBody.isKinematic = true;
         //Start the ending
 
         StartCoroutine(Ending());
@@ -124,10 +171,17 @@ public class DreamManager : MonoBehaviour
     //ending coroutine
     IEnumerator Ending()
     {
-        while (true)
+        Debug.Log("hi");
+        if (animationObjects.Count != 0)
         {
-            yield return null;
+            for (int i = 0; i < animationObjects.Count; i++)
+            {
+                yield return MoveTo(VRPlayer.transform, animationObjects[i + 1].transform, 30.0f);
+                yield return null;
+            }
         }
+
+        yield return MoveTo(VRPlayer.transform, endingEndZone.transform, 30.0f);
     }
 
     public void endingFinish()

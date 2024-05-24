@@ -36,7 +36,7 @@ namespace Autohand
 
         [AutoSmallHeader("Place Settings")]
         public bool showPlaceSettings = true;
-        [Tooltip("Snaps an object to the point at start, leave empty for no target")]
+        //[Tooltip("Snaps an object to the point at start, leave empty for no target")]
         public Grabbable startPlaced;
         [Tooltip("This will offset where the object position is when placed")]
         public Transform placedOffset;
