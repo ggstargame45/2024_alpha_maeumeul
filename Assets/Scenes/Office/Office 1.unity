@@ -228,6 +228,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2545258597826462468, guid: edf16ae5b4b43e24d84a1ab306939489, type: 3}
+      propertyPath: audioListener
+      value: 
+      objectReference: {fileID: 1898080028}
     - target: {fileID: 4386323548932268523, guid: edf16ae5b4b43e24d84a1ab306939489, type: 3}
       propertyPath: cutScene
       value: 
@@ -830,6 +834,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28d60860cf5e7f348be6f7cd91fa5e6d, type: 3}
+--- !u!81 &1898080028 stripped
+AudioListener:
+  m_CorrespondingSourceObject: {fileID: 7285758785296492410, guid: 28d60860cf5e7f348be6f7cd91fa5e6d, type: 3}
+  m_PrefabInstance: {fileID: 1771400585}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1946669650 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9033096119865720010, guid: ff361c2ca84280943910b55d448d2426, type: 3}
