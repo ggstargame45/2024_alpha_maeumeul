@@ -11,7 +11,7 @@ public class FlowManager : MonoBehaviour
     public GameObject cutScene;
     private int index = 0;
 
-    private void Start()
+    public void Start()
     {
         for(int i = 0; i < officeWorkList.Length; i++)
         {
@@ -22,7 +22,7 @@ public class FlowManager : MonoBehaviour
         Next();
     }
 
-    private void Next()
+    public void Next()
     {
         Debug.Log(string.Format("{0}, next, index : {1}",gameObject.name, index));
         if(index >= officeWorkList.Length)
@@ -34,7 +34,7 @@ public class FlowManager : MonoBehaviour
         index += 1;
     }
 
-    private void End()
+    public void End()
     {
         if (cutScene != null)
         {
