@@ -64,6 +64,8 @@ namespace Gamekit3D
                 foreach (var i in audioSources) i.volume = 0;
                 trackStack.Push(audioSources[0].name);
                 if (playOnStart) Play();
+
+                Debug.Log(audioSources[0].name);
             }
             volume = initialVolume;
         }

@@ -14,12 +14,19 @@ public class TestGunPositionReset : MonoBehaviour
     {
         this.transform.position = lastPosition;
         gun.transform.localPosition = Vector3.zero;
+        gun.transform.localRotation = Quaternion.identity;
+        gun.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        gun.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
     }
 
 
     public void GoToLocalZero()
     {
         gun.transform.localPosition = Vector3.zero;
+        gun.transform.localRotation = Quaternion.identity;
+        gun.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        gun.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+
     }
 
 }

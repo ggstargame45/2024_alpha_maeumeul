@@ -18,7 +18,7 @@ public class TestUIObject : MonoBehaviour
     IEnumerator FadeIn()
     {
         //wait for 1 second
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(20);
         
         gameObject.SetActive(false);
     }

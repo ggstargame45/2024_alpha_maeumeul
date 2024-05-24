@@ -21,12 +21,14 @@ public class DreamManager : MonoBehaviour
     public TestDoorOpen lastDoor;
     public TestDoorOpen endingDoor;
 
-    public Image UIimage;
-    public GameObject UIimageObject;
-
-    public List<Sprite> UIimages;
-
     public List<GameObject> animationObjects;
+
+    public UnityEvent firstDreamEndEvent;
+    public UnityEvent lastDreamEndEvent;
+
+    public UnityEvent lastDreamStartEvent;
+
+    public UnityEvent endingStartEvent;
 
     public int firstDreamScoreCount = 0;
 
@@ -68,51 +70,6 @@ public class DreamManager : MonoBehaviour
         firstDreamScoreCount++;
     }
 
-
-    public void StartArrangeTaskUI()
-    {
-        if(usingUI)
-        {
-            return;
-        }
-        StartCoroutine(StartArrangeTaskUICoroutine());
-
-    }
-
-    IEnumerator StartArrangeTaskUICoroutine()
-    {
-        for(int i = 0; i<2; i++)
-        {
-            usingUI= true;
-            UIimage.sprite = UIimages[i+6];
-            UIimageObject.SetActive(true);
-            yield return new WaitForSeconds(3.0f);
-            UIimageObject.SetActive(false);
-        }
-        usingUI = false;
-    }
-
-    public void StartShootingTaskUI()
-    {
-        if(usingUI)
-        {
-            return;
-        }
-        StartCoroutine(StartShootingTaskUICoroutine());
-    }
-
-    IEnumerator StartShootingTaskUICoroutine()
-    {
-        usingUI = true;
-
-            UIimage.sprite = UIimages[8];
-            UIimageObject.SetActive(true);
-            yield return new WaitForSeconds(3.0f);
-            UIimageObject.SetActive(false);
-
-    usingUI = false;
-    }
-
     IEnumerator FirstDream()
     {
         //Do something
@@ -131,20 +88,18 @@ public class DreamManager : MonoBehaviour
     {
         StopAllCoroutines();
 
+        firstDreamEndEvent.Invoke();
+
         lastDoor.StartCloseDoor();
         //Start the last dream
 
+        StartCoroutine(LastDream());
         
     }
 
     IEnumerator LastDream()
     {
-        while (lastDreamScoreCount < 4)
-        {
-            yield return null;
-        }
-
-        yield return new WaitForSeconds(Random.Range(4.0f, 7.0f));
+        yield return new WaitForSeconds(25);
 
         endingDoor.StartDoorOpen();
     }
@@ -171,17 +126,18 @@ public class DreamManager : MonoBehaviour
     //ending coroutine
     IEnumerator Ending()
     {
+        yield return MoveTo(VRPlayer.transform, new Vector3(0.0199999996f, 4.28606367f, 54.2099991f),5);
         Debug.Log("hi");
         if (animationObjects.Count != 0)
         {
             for (int i = 0; i < animationObjects.Count; i++)
             {
-                yield return MoveTo(VRPlayer.transform, animationObjects[i + 1].transform, 30.0f);
+                yield return MoveTo(VRPlayer.transform, animationObjects[i + 1].transform.position, 30.0f);
                 yield return null;
             }
         }
 
-        yield return MoveTo(VRPlayer.transform, endingEndZone.transform, 30.0f);
+        yield return MoveTo(VRPlayer.transform, endingEndZone.transform.position, 30.0f);
     }
 
     public void endingFinish()
@@ -191,11 +147,11 @@ public class DreamManager : MonoBehaviour
 
 
     //A corutine that goes from one point to another
-    IEnumerator MoveTo(Transform start, Transform end, float time)
+    IEnumerator MoveTo(Transform start, Vector3 end, float time)
     {
         float elapsedTime = 0;
         Vector3 startingPos = start.position;
-        Vector3 endingPos = end.position;
+        Vector3 endingPos = end;
 
         while (elapsedTime < time)
         {

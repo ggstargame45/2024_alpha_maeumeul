@@ -11,9 +11,11 @@ public class TestShootPuzzleManage : MonoBehaviour
     public UnityEvent puzzleSucceed;
 
     public GameObject glowingZone;
+    public GameObject ShootingUI;
 
     public int puzzleIndex;
-    public bool isAvailable = false;
+    public bool isFirst = true;
+    public bool isAvailable = true;
 
     public void Start()
     {
@@ -27,10 +29,11 @@ public class TestShootPuzzleManage : MonoBehaviour
 
     public void StartPuzzle()
     {
-        if(isAvailable)
-        {
-            return;
-        }
+        //if(!isAvailable)
+        //{
+        //    return;
+        //}
+        Debug.Log("StartPuzzle");
         glowingZone.SetActive(true);
         isAvailable = true;
         puzzlesGameObject[puzzleIndex].SetActive(true);
@@ -43,6 +46,16 @@ public class TestShootPuzzleManage : MonoBehaviour
         puzzleSucceed.Invoke();
         puzzleIndex = (puzzleIndex+1) % puzzlesGameObject.Count;
         glowingZone.SetActive(false);
+
+        if(isFirst)
+        {
+            isFirst = false;
+            ShootingUI.SetActive(false);
+        }
     }       
+    public void stopEveryThing()
+    {
+
+    }
     
 }

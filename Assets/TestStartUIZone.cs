@@ -5,17 +5,8 @@ using UnityEngine.Events;
 
 public class TestStartUIZone : MonoBehaviour
 {
-    public UnityEvent startUIEvent;
-
-
-    
-    void OnTriggerEnter(Collider other)
+    public void deactivateOnFirstSuccess()
     {
-        if (other.gameObject.tag == "Player")
-        {
-            startUIEvent.Invoke();
-            gameObject.SetActive(false);
-        }
+        gameObject.SetActive(false);
     }
-
 }

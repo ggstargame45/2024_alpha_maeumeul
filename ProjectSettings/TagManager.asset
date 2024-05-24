@@ -10,6 +10,9 @@ TagManager:
   - PuzzleTile
   - Bullet
   - Gun
+  - Red
+  - Blue
+  - Yellow
   layers:
   - Default
   - TransparentFX

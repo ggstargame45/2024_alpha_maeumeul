@@ -20,6 +20,7 @@ public class TestIndivShootPuzzle : MonoBehaviour
     }
     public void Success()
     {
+        Debug.Log("Success");
         puzzleSuccessEvent.Invoke();
     }
 
@@ -47,8 +48,12 @@ public class TestIndivShootPuzzle : MonoBehaviour
     public void flipEvent(int flippedIndex, bool needFlip)
     {
         currentTrue[flippedIndex] = !needFlip;
+        for (int i = 0; i < 16; i++)
+        {
+            Debug.Log("index : " + i.ToString() + " :" + currentTrue[i]);
+        }
 
-        if(!needFlip)
+        if (!needFlip)
         {
             checkSuccess();
         }
@@ -56,6 +61,8 @@ public class TestIndivShootPuzzle : MonoBehaviour
 
     public void checkSuccess()
     {
+        
+
         bool success = true;
         foreach (bool b in currentTrue)
         {
@@ -65,6 +72,7 @@ public class TestIndivShootPuzzle : MonoBehaviour
                 break;
             }
         }
+
 
         if (success)
         {
