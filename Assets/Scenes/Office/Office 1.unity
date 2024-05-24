@@ -676,10 +676,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1230007169762887283, guid: ac9468f984d397542b71ae947ed0ed15, type: 3}
-      propertyPath: actions.Array.data[7].waitSeconds
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1230007169762887283, guid: ac9468f984d397542b71ae947ed0ed15, type: 3}
       propertyPath: actions.Array.data[0].CutAwayEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 1946669650}
@@ -695,13 +691,13 @@ PrefabInstance:
       propertyPath: actions.Array.data[7].CutAwayEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 335373182}
-    - target: {fileID: 6231910175022704401, guid: ac9468f984d397542b71ae947ed0ed15, type: 3}
-      propertyPath: cutAways.Array.data[2].waitSeconds
-      value: 19
+    - target: {fileID: 6383041328833229334, guid: ac9468f984d397542b71ae947ed0ed15, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.164
       objectReference: {fileID: 0}
     - target: {fileID: 7790138850595741185, guid: ac9468f984d397542b71ae947ed0ed15, type: 3}
       propertyPath: m_Name
-      value: Cut Scene
+      value: Cut Scene 1
       objectReference: {fileID: 0}
     - target: {fileID: 7790138850595741185, guid: ac9468f984d397542b71ae947ed0ed15, type: 3}
       propertyPath: m_IsActive

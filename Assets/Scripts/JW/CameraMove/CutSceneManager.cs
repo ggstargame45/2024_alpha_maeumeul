@@ -14,6 +14,7 @@ public class CutSceneManager : MonoBehaviour
     }
 
     public string vrName = "";
+    public GameObject virtualCam;
     public GameObject mainCamera;
     public GameObject leftHand;
     public List<CutAway> cutAways;
@@ -47,7 +48,13 @@ public class CutSceneManager : MonoBehaviour
         var wfs = new WaitForSeconds(0.2f);
         yield return wfs;
         GameObject vr = GameObject.Find(vrName);
-        if (vr) vr.SetActive(false);
+        if (vr)
+        {
+            var cam = vr.transform.GetChild(0).GetChild(2).transform;
+            virtualCam.transform.position = cam.position;
+            virtualCam.transform.rotation = cam.rotation;
+            vr.SetActive(false);
+        }
         mainCamera.SetActive(true);
         leftHand.SetActive(true);
         NextScene();
