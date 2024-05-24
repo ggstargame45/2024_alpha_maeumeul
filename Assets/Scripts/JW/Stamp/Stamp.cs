@@ -12,9 +12,9 @@ public class Stamp : MonoBehaviour
     public void Call()
     {
         if (!canUse) return;
+        stampEvent?.Invoke();
         if (!StampAngleCheck()) return;
         canUse = false;
-        stampEvent?.Invoke();
         RaycastHit[] hits;
         hits = Physics.RaycastAll(gameObject.transform.position, transform.up * -1, distance);
         for (int i = 0; i < hits.Length; i++)
@@ -31,7 +31,7 @@ public class Stamp : MonoBehaviour
 
     private void Update()
     {
-        Debug.DrawRay(gameObject.transform.position, transform.up * -1 * distance, Color.red);
+        //Debug.DrawRay(gameObject.transform.position, transform.up * -1 * distance, Color.red);
     }
 
     private bool StampAngleCheck()

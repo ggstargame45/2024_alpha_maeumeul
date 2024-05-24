@@ -774,6 +774,9 @@ MonoBehaviour:
   body: {fileID: 4624828433408162867}
   hightlightMaterial: {fileID: 0}
   isGrabbable: 1
+  hasOtherPlacePointMesh: 0
+  originalMesh: {fileID: 0}
+  otherPlacePointMesh: {fileID: 0}
   CopySettings: {fileID: 0}
   grabType: 0
   handType: 0
@@ -984,7 +987,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fc53a6bdba4db93499172f4cfc377427, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 904e263462f12454d8f442559b6151d4, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1485,7 +1488,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: -0.0594, z: -0.005}
-  m_LocalScale: {x: 0.05, y: 0.025, z: 0.001}
+  m_LocalScale: {x: 0.05, y: 0.025, z: 0.0001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 49409668502858400}
@@ -2747,7 +2750,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: -0.0594, z: -0.005}
-  m_LocalScale: {x: 0.05, y: 0.025, z: 0.001}
+  m_LocalScale: {x: 0.05, y: 0.025, z: 0.0001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5441275339127723716}
@@ -3578,8 +3581,8 @@ Transform:
   m_GameObject: {fileID: 5574071905215702614}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.000000119209275, z: -1, w: -0}
-  m_LocalPosition: {x: 0, y: 0, z: -5.0000224}
-  m_LocalScale: {x: 49.350548, y: 50.08933, z: 2467.5269}
+  m_LocalPosition: {x: 0, y: 0, z: -35.71434}
+  m_LocalScale: {x: 35.250397, y: 35.778088, z: 17625.195}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 243906179900674191}
@@ -4239,8 +4242,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: -0.0594, z: -0.005}
-  m_LocalScale: {x: 0.05, y: 0.025, z: 0.001}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.07, y: 0.035, z: 0.00013999999}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4887221462231842955}
   m_Father: {fileID: 7312820869306201291}
@@ -4307,7 +4310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 623f6ac867bd3fd449436ea5a241a3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeMaterial: {fileID: 2100000, guid: 269713d317a0da84a850f617b142dd44, type: 2}
+  changeMaterial: {fileID: 2100000, guid: 6cf3c3244274d6c4b870357ff78e3855, type: 2}
 --- !u!114 &5644900658904496890
 MonoBehaviour:
   m_ObjectHideFlags: 0
