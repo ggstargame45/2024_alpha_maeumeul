@@ -63,7 +63,7 @@ public class DreamManager : MonoBehaviour
         StartCoroutine(FirstDream());
     }
 
-    public void incrementScore()
+    public void incrementFirstDreamScore()
     {
         firstDreamScoreCount++;
     }

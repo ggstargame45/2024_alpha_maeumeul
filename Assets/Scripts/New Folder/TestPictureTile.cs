@@ -1,15 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TestPictureTile : MonoBehaviour
 {
 
     public bool isRotating = false;
-    void Start()
+    public int index;
+    public UnityEvent<int,bool> Flipped;
+    public bool needFlip;
+
+    public void SetAnswer(bool answer)
     {
-        //StartCoroutine(Rotate180Random());
-        
+        needFlip = answer;
+        if (answer)
+        {
+            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(180, 0, 0));
+        }
+    }
+
+    public void Hit()
+    {
+        needFlip = !needFlip;
+        Flipped.Invoke(index, needFlip);
+        StartCoroutine(Rotate180());
     }
 
     public void StartRotation()
@@ -55,8 +70,7 @@ public class TestPictureTile : MonoBehaviour
     {
         if (!isRotating && other.tag=="Bullet")
         {
-            StartCoroutine(Rotate180());
-            
+            Hit();
         }
     }
 
