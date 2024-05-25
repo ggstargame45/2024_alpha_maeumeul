@@ -11,7 +11,7 @@ public class TestIndivShootPuzzle : MonoBehaviour
 
     public List<int> initialAnswerTileIndex;
 
-    private List<bool> currentTrue;
+    public List<bool> currentTrue;
 
 
     public void setAnswerTileIndex(List<int> answerTileIndex)
@@ -61,12 +61,14 @@ public class TestIndivShootPuzzle : MonoBehaviour
 
     public void checkSuccess()
     {
+
+        Debug.Log("Check Success");
         
 
         bool success = true;
         foreach (bool b in currentTrue)
         {
-            if (b)
+            if (!b)
             {
                 success = false;
                 break;

@@ -12,6 +12,7 @@ public class TestLastPuzzle : MonoBehaviour
     public bool isRotating = false;
     public int index;
     public UnityEvent Ended;
+    public UnityEvent firstHit;
     public bool needFlip;
 
     public int hitCount = 0;
@@ -41,7 +42,7 @@ public class TestLastPuzzle : MonoBehaviour
 
     public IEnumerator startEndCorutine()
     {
-        yield return new WaitForSeconds(25);
+        yield return new WaitForSeconds(1);
 
         foreach (Rigidbody r in rb)
         {
@@ -66,10 +67,23 @@ public class TestLastPuzzle : MonoBehaviour
         }
     }
 
+
+
     public void Hit()
     {
-        needFlip = !needFlip;
-        StartCoroutine(Rotate180());
+        if(hitCount == 0)
+        {
+            firstHit.Invoke();
+            
+        }
+        hitCount++;
+
+        if (hitCount > 8)
+        {
+            startEnd();
+        }
+
+        //StartCoroutine(Rotate180());
     }
 
     public void StartRotation()
@@ -111,12 +125,5 @@ public class TestLastPuzzle : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (!isRotating && other.tag == "Bullet")
-        {
-            Hit();
-        }
-    }
 
 }

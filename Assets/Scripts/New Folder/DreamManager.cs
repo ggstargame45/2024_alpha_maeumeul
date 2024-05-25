@@ -30,6 +30,7 @@ public class DreamManager : MonoBehaviour
 
     public UnityEvent endingStartEvent;
 
+
     public int firstDreamScoreCount = 0;
 
 
@@ -127,17 +128,15 @@ public class DreamManager : MonoBehaviour
     IEnumerator Ending()
     {
         yield return MoveTo(VRPlayer.transform, new Vector3(0.0199999996f, 4.28606367f, 54.2099991f),5);
-        Debug.Log("hi");
+        StartCoroutine( MoveTo(VRPlayer.transform, endingEndZone.transform.position, 40.0f));
         if (animationObjects.Count != 0)
         {
             for (int i = 0; i < animationObjects.Count; i++)
             {
-                yield return MoveTo(VRPlayer.transform, animationObjects[i + 1].transform.position, 30.0f);
-                yield return null;
+                animationObjects[i].SetActive(true);
+                yield return new WaitForSeconds(5);
             }
         }
-
-        yield return MoveTo(VRPlayer.transform, endingEndZone.transform.position, 30.0f);
     }
 
     public void endingFinish()
