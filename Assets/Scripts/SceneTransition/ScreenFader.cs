@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,7 @@ namespace Gamekit3D
     {
         public enum FadeType
         {
-            Black, Loading, GameOver,
+            Black, Loading, White,
         }
 
         public static ScreenFader Instance
@@ -45,7 +46,7 @@ namespace Gamekit3D
 
         public CanvasGroup faderCanvasGroup;
         public CanvasGroup loadingCanvasGroup;
-        public CanvasGroup gameOverCanvasGroup;
+        public CanvasGroup whiteCanvasGroup;
         public float fadeDuration = 1f;
 
         protected bool m_IsFading;
@@ -89,8 +90,8 @@ namespace Gamekit3D
             CanvasGroup canvasGroup;
             if (Instance.faderCanvasGroup.alpha > 0.1f)
                 canvasGroup = Instance.faderCanvasGroup;
-            else if (Instance.gameOverCanvasGroup.alpha > 0.1f)
-                canvasGroup = Instance.gameOverCanvasGroup;
+            else if (Instance.whiteCanvasGroup.alpha > 0.1f)
+                canvasGroup = Instance.whiteCanvasGroup;
             else
                 canvasGroup = Instance.loadingCanvasGroup;
 
@@ -107,8 +108,8 @@ namespace Gamekit3D
                 case FadeType.Black:
                     canvasGroup = Instance.faderCanvasGroup;
                     break;
-                case FadeType.GameOver:
-                    canvasGroup = Instance.gameOverCanvasGroup;
+                case FadeType.White:
+                    canvasGroup = Instance.whiteCanvasGroup;
                     break;
                 default:
                     canvasGroup = Instance.loadingCanvasGroup;
