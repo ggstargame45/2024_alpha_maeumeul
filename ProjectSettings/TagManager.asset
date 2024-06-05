@@ -3,20 +3,29 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Anchor
+  - CheckList
+  - Floor
+  - PuzzleTile
+  - Bullet
+  - Gun
+  - Red
+  - Blue
+  - Yellow
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Grabbing
+  - Grabbable
+  - Hand
+  - HandPlayer
+  - SocketInteractor
+  - SocketInteractable
   - 
   - 
   - 
