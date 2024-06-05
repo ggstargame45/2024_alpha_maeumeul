@@ -23,6 +23,7 @@ public class TestPictureTile : MonoBehaviour
     public void Hit()
     {
         needFlip = !needFlip;
+        Debug.Log("Hit");
         Flipped.Invoke(index, needFlip);
         StartCoroutine(Rotate180());
     }
@@ -41,7 +42,7 @@ public class TestPictureTile : MonoBehaviour
         Vector3 startRotation = transform.rotation.eulerAngles;
         Vector3 endRotation = startRotation + new Vector3(180, 0, 0);
 
-        isRotating = true;
+        
 
         while (elapsed < duration)
         {
@@ -70,6 +71,7 @@ public class TestPictureTile : MonoBehaviour
     {
         if (!isRotating && other.tag=="Bullet")
         {
+            isRotating = true;
             Hit();
         }
     }

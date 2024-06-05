@@ -30,6 +30,8 @@ public class DreamManager : MonoBehaviour
 
     public UnityEvent endingStartEvent;
 
+    public UnityEvent endingEndEvent;
+
 
     public int firstDreamScoreCount = 0;
 
@@ -74,7 +76,7 @@ public class DreamManager : MonoBehaviour
     IEnumerator FirstDream()
     {
         //Do something
-        while(firstDreamScoreCount < 4) { 
+        while(firstDreamScoreCount < 5) { 
             yield return null;
         }
 
@@ -94,15 +96,14 @@ public class DreamManager : MonoBehaviour
         lastDoor.StartCloseDoor();
         //Start the last dream
 
-        StartCoroutine(LastDream());
+        //StartCoroutine(LastDream());
         
     }
 
-    IEnumerator LastDream()
-    {
-        yield return new WaitForSeconds(25);
 
-        endingDoor.StartDoorOpen();
+    public void lastDreamFinish()
+    {
+        lastDreamEndEvent.Invoke();
     }
 
 
@@ -137,6 +138,8 @@ public class DreamManager : MonoBehaviour
                 yield return new WaitForSeconds(5);
             }
         }
+
+        endingEndEvent.Invoke();
     }
 
     public void endingFinish()

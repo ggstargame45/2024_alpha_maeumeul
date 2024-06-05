@@ -13,9 +13,11 @@ public class TestShootPuzzleManage : MonoBehaviour
     public GameObject glowingZone;
     public GameObject ShootingUI;
 
+    public AudioSource successAudioSource;
+
     public int puzzleIndex;
     public bool isFirst = true;
-    public bool isAvailable = true;
+    public bool isAvailable = false;
 
     public void Start()
     {
@@ -29,10 +31,10 @@ public class TestShootPuzzleManage : MonoBehaviour
 
     public void StartPuzzle()
     {
-        //if(!isAvailable)
-        //{
-        //    return;
-        //}
+        if (isAvailable)
+        {
+            return;
+        }
         Debug.Log("StartPuzzle");
         glowingZone.SetActive(true);
         isAvailable = true;
@@ -42,12 +44,17 @@ public class TestShootPuzzleManage : MonoBehaviour
 
     public void taskSuccess()
     {
+        Debug.Log("taskSuccess" + puzzleIndex.ToString());
         puzzlesGameObject[puzzleIndex].SetActive(false);
         puzzleSucceed.Invoke();
         puzzleIndex = (puzzleIndex+1) % puzzlesGameObject.Count;
         glowingZone.SetActive(false);
 
-        if(isFirst)
+        isAvailable = false;
+
+        successAudioSource.Play();
+
+        if (isFirst)
         {
             isFirst = false;
             ShootingUI.SetActive(false);

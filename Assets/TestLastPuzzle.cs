@@ -78,7 +78,7 @@ public class TestLastPuzzle : MonoBehaviour
         }
         hitCount++;
 
-        if (hitCount > 8)
+        if (hitCount > 15)
         {
             startEnd();
         }

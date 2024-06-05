@@ -34,7 +34,6 @@ public class TestIndivShootPuzzle : MonoBehaviour
             currentTrue.Add(true);
             testPictureTiles[i].SetAnswer(false);
             testPictureTiles[i].index = i;
-            testPictureTiles[i].Flipped.AddListener(flipEvent);
         }
 
         foreach (int index in initialAnswerTileIndex)
@@ -48,6 +47,7 @@ public class TestIndivShootPuzzle : MonoBehaviour
     public void flipEvent(int flippedIndex, bool needFlip)
     {
         currentTrue[flippedIndex] = !needFlip;
+        Debug.Log("Flip Event : " + flippedIndex.ToString() + " : " + needFlip.ToString());
         for (int i = 0; i < 16; i++)
         {
             Debug.Log("index : " + i.ToString() + " :" + currentTrue[i]);
