@@ -76,11 +76,11 @@ public class DreamManager : MonoBehaviour
     IEnumerator FirstDream()
     {
         //Do something
-        while(firstDreamScoreCount < 5) { 
+        while(firstDreamScoreCount < 3) { 
             yield return null;
         }
 
-        yield return new WaitForSeconds(Random.Range(4.0f, 7.0f));
+        yield return new WaitForSeconds(Random.Range(9.0f, 12.0f));
 
         lastDoor.StartDoorOpen();
 
